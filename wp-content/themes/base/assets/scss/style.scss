@@ -1,0 +1,25 @@
+/*!
+Theme Name: Base Theme
+Theme URI: https://github.com/kylephillips/wp-base-theme
+Description: A (very basic) base theme and plugin template for new projects using a Gulp build process.
+Author: Kyle Phillips
+Author URI: https://github.com/kylephillips
+Version: 1.0
+*/
+
+// Variables & Mixins
+@import "_variables.scss";
+@import "_mixins.scss";
+
+// Base Styles
+@import "_reset.scss";
+@import "_scaffolding.scss";
+
+// Editor Formats & WP Specific Styles
+@import "_wp-formats.scss";
+
+// Pages & Templates
+@import "_404.scss";
+
+// Utitility Classes
+@import "_utilities.scss";

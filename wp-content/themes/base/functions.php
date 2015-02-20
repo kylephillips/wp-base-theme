@@ -1,34 +1,45 @@
 <?php
-	
-	// Add RSS links to <head> section
-	automatic_feed_links();
-	
-	// Load jQuery
-	if ( !is_admin() ) {
-	   wp_deregister_script('jquery');
-	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"), false);
-	   wp_enqueue_script('jquery');
-	}
-	
-	// Clean up the <head>
-	function removeHeadLinks() {
-    	remove_action('wp_head', 'rsd_link');
-    	remove_action('wp_head', 'wlwmanifest_link');
-    }
-    add_action('init', 'removeHeadLinks');
-    remove_action('wp_head', 'wp_generator');
-    
-	// Declare sidebar widget zone
-    if (function_exists('register_sidebar')) {
-    	register_sidebar(array(
-    		'name' => 'Sidebar Widgets',
-    		'id'   => 'sidebar-widgets',
-    		'description'   => 'These are widgets for the sidebar.',
-    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    		'after_widget'  => '</div>',
-    		'before_title'  => '<h2>',
-    		'after_title'   => '</h2>'
-    	));
-    }
+/**
+* Theme Functions
+* See theme plugin for additional functionality
+*/
 
+/**
+* Theme Support & Editor Styles
+*/
+add_editor_style('editor-styles.css');
+
+/**
+* Image Sizes
+*/
+add_theme_support( 'post-thumbnails' );
+//add_image_size( 'image-size', 100, 100, true );
+
+/**
+* Nav Menus
+*/
+register_nav_menus(array(
+	'main_nav' => 'Main Nav',
+));
+
+/**
+* Register ACF Options Page
+*/
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' => 'Site Options',
+		'menu_title' => 'Options'
+	));
+}
+
+/**
+* Allow SVG Uploads
+* @link http://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/
+*/
+function cc_mime_types($mimes)
+{
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 ?>

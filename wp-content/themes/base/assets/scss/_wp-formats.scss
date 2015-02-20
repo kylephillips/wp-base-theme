@@ -1,0 +1,57 @@
+//
+// Wordpress Specific Editor Formats
+// --------------------------------------------------
+.alignleft {
+	float: left;
+	width: 45%;
+	margin: 0 20px 20px 0;
+}
+.alignright {
+	float: right;
+	width: 45%;
+	margin: 0 0 20px 20px;
+}
+.alignnone {
+	width: 100%;
+}
+.wp-caption {
+	margin: 0;
+	&.alignnone {
+		width: 100% !important;
+	}
+	&.alignleft, &.alignright {
+		width: 45% !important;
+	}
+	&.alignleft {
+		margin: 0 20px 20px 0;
+	}
+	img {
+		width: 100%;
+	}
+	p {
+		font-size: 14px;
+		font-style: oblique;
+	}
+}
+
+
+@media (max-width: 767px)
+{
+	.alignleft, .alignright {
+		float: none;
+		width: 100%;
+		margin: 0 0px 20px 0;
+	}
+
+	.wp-caption {
+		&.alignnone {
+			width: 100% !important;
+		}
+		&.alignleft, &.alignright {
+			width: 100% !important;
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
