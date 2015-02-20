@@ -14,3 +14,5 @@ If running the accompanying plugin, PHP v5.3.2 or higher is required.
 ## Plugin Setup
 1. Rename the `base` plugin directory
 2. Rename the namespace declaration in `composer.json`
+3. Rename namespace in files under `app/`
+4. Add post types/taxonomies as needed in their respective classes
