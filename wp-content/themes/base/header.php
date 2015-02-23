@@ -19,7 +19,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/css/ie.css" />
 	<![endif]-->
 
-    <!--[if lt IE 9]>
+	<!--[if lt IE 9]>
     	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
