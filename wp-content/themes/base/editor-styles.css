@@ -1,0 +1,7 @@
+@import "style.css";
+body {
+	height: auto;
+}
+body.wp-autoresize {
+	padding: 20px !important;
+}
