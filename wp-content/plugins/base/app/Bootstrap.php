@@ -26,7 +26,7 @@ class Bootstrap {
 	public function defineGlobals()
 	{
 		global $base_plugin_directory;
-		$base_plugin_directory = basename(dirname(dirname(__FILE__)));
+		$base_plugin_directory = plugins_url() . '/' . basename(dirname(dirname(__FILE__)));
 	}
 
 	/**
