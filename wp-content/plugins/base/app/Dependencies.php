@@ -28,7 +28,7 @@ class Dependencies {
 	{
 		wp_enqueue_script(
 			'scripts',
-			get_template_directory_uri() . '/assets/js/scripts.js',
+			get_template_directory_uri() . '/assets/js/scripts.min.js',
 			array(),
 			'1.0',
 			true
