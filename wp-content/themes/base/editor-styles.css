@@ -2,6 +2,8 @@
 body {
 	height: auto;
 }
-body.wp-autoresize {
+body.wp-autoresize, 
+body.acf_content {
 	padding: 20px !important;
+	background-color: #fff;
 }
