@@ -7,6 +7,7 @@ use Base\Dashboard;
 use Base\Functions;
 use Base\Dependencies;
 use Base\Login;
+use Base\Typekit;
 
 /**
 * Primary Plugin class
@@ -37,6 +38,7 @@ class Bootstrap {
 		$post_types = new PostTypes;
 		$taxonomies = new Taxonomies;
 		$tinymce = new TinyMce;
+		$typekit = new Typekit(null); // Add Kit ID to enable typekit in the visual editor/TinyMCE
 	}
 
 	/**
