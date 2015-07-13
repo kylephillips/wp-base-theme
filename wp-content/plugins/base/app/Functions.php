@@ -1,8 +1,12 @@
-<?php namespace Base;
+<?php 
+
+namespace Base;
+
 /**
 * General Theme Functions
 */
-class Functions {
+class Functions 
+{
 
 	function __construct()
 	{
@@ -15,7 +19,6 @@ class Functions {
 		$this->remove_yoast_columns();
 	}
 
-
 	/**
 	* Disable Pingbacks - DoS Attack Prevention
 	*/
@@ -25,7 +28,6 @@ class Functions {
 		return $methods;
 	}
 
-
 	/**
 	* Clean up WP Generated menus
 	*/
@@ -34,18 +36,17 @@ class Functions {
 	  return is_array($var) ? array_intersect($var, array('current-menu-item','contact')) : '';
 	}
 
-
 	/**
 	* Yoast Columns to Remove
 	*/
-	public function yoast_columns($columns) {
+	public function yoast_columns($columns)
+	{
 		unset( $columns['wpseo-score'] );
 		unset( $columns['wpseo-title'] );
 		unset( $columns['wpseo-metadesc'] );
 		unset( $columns['wpseo-focuskw'] );
 		return $columns;
 	}
-
 
 	/**
 	* Move Yoast Meta Box to Bottom
@@ -54,7 +55,6 @@ class Functions {
 	{
 		return 'low';
 	}
-
 
 	/**
 	* Remove Yoast Columns
@@ -66,7 +66,6 @@ class Functions {
 		add_filter ( 'manage_edit-page_columns', array($this, 'yoast_columns' ));
 	}
 
-
 	/**
     * Replace Elipses in excerpt
     */
@@ -74,7 +73,6 @@ class Functions {
 	{
 		return '...';
 	}
-
 
 	/**
 	* Add class to edit button

@@ -1,15 +1,18 @@
-<?php namespace Base;
+<?php 
+
+namespace Base;
+
 /**
 * Register Taxonomies
 * Add a method for each taxonomy required and call in the constructor
 */
-class Taxonomies {
+class Taxonomies 
+{
 
 	public function __construct()
 	{
 		//$this->exampleCategory();
 	}
-
 
 	/**
 	* Case Study Types

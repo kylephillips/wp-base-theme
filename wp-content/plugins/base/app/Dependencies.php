@@ -1,14 +1,15 @@
-<?php namespace Base;
+<?php 
 
-class Dependencies {
+namespace Base;
 
+class Dependencies 
+{
 
 	public function __construct()
 	{
 		add_action( 'wp_enqueue_scripts', array($this, 'jquery'));
 		add_action( 'wp_enqueue_scripts', array($this, 'scripts'));
 	}
-
 
 	/**
 	* Deregister the default jQuery and grab copy from Google CDN
@@ -19,7 +20,6 @@ class Dependencies {
 		wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"), false);
 		wp_enqueue_script('jquery');
 	}
-
 
 	/**
 	* Theme Scripts – enqueue any unminified scripts needed here

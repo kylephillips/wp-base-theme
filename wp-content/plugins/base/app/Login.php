@@ -1,6 +1,9 @@
-<?php namespace Base;
+<?php 
 
-class Login {
+namespace Base;
+
+class Login 
+{
 
 	public function __construct()
 	{
@@ -19,7 +22,7 @@ class Login {
 		}
         /**
         body.login div#login h1 a {
-            background-image: url(' . get_stylesheet_directory_uri() . '/assets/images/stir-marketing-logo.svg);
+            background-image: url(' . get_stylesheet_directory_uri() . '/assets/images/logo.svg);
             padding-bottom: 30px;
             background-size: 100%;
             width: auto;
@@ -41,7 +44,7 @@ class Login {
         body.login input[type="submit"]:hover {
         	background-color: #f05a28;
         	border-color: #f05a28 !important;
-        	color: $white;
+        	color: #ffffff;
         	box-shadow: none !important;
         }
     	</style>';

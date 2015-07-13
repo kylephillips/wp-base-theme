@@ -1,9 +1,12 @@
-<?php namespace Base;
+<?php 
+
+namespace Base;
 
 /**
 * Enables Typekit in Visual Editor
 */
-class Typekit {
+class Typekit 
+{
 
 	/**
 	* Kit ID

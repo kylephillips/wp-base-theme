@@ -1,4 +1,6 @@
-<?php namespace Base;
+<?php 
+
+namespace Base;
 
 use Base\TinyMce;
 use Base\PostTypes;
@@ -12,7 +14,8 @@ use Base\Typekit;
 /**
 * Primary Plugin class
 */
-class Bootstrap {
+class Bootstrap 
+{
 
 	function __construct()
 	{

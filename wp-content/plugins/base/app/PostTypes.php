@@ -1,9 +1,13 @@
-<?php namespace Base;
+<?php 
+
+namespace Base;
+
 /**
 * Post Types
 * Add a method for each post type required and call in the constructor
 */
-class PostTypes {
+class PostTypes 
+{
 
 	function __construct()
 	{

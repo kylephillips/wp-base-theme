@@ -1,10 +1,12 @@
-<?php namespace Base;
+<?php 
+
+namespace Base;
 
 /**
 * Edit TinyMCE/Add formats
 */
-class TinyMce {
-
+class TinyMce 
+{
 
 	public function __construct()
 	{
@@ -12,7 +14,6 @@ class TinyMce {
 		add_filter('mce_buttons_2', array($this, 'buttonsTwo') );
 		add_filter( 'tiny_mce_before_init', array($this, 'add_formats' ));
 	}
-
 
 	/**
 	* Editor buttons row one
@@ -30,7 +31,6 @@ class TinyMce {
 		return $buttons;
 	}
 
-
 	/**
 	* Editor buttons Row Two
 	*/
@@ -40,7 +40,6 @@ class TinyMce {
 		$buttons = $this->removeButtons($remove, $buttons);
 		return $buttons;
 	}
-
 
 	/**
 	* Loop through buttons to remove
@@ -56,7 +55,6 @@ class TinyMce {
 		return $all_buttons;
 	}
 
-
 	/**
 	* Add Buttons to row
 	* @return array of buttons
@@ -70,7 +68,6 @@ class TinyMce {
 		}
 		return $all_buttons;
 	}
-
 
 	/**
 	* Add custom formats

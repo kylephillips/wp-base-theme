@@ -1,9 +1,12 @@
-<?php namespace Base;
+<?php 
+
+namespace Base;
+
 /**
 * Dashboard Edits
 */
-class Dashboard {
-
+class Dashboard 
+{
 
 	function __construct()
 	{
@@ -15,7 +18,6 @@ class Dashboard {
 		//add_action('admin_head', array($this, 'admin_logo'));
 		//add_action('admin_menu', array($this, 'remove_menus'));
 	}
-
 
 	/**
 	* Clean up the dashboard landing
@@ -29,7 +31,6 @@ class Dashboard {
 		unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
 		unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
 	}
-
 
 	/**
 	* Clean up the admin bar
@@ -48,7 +49,6 @@ class Dashboard {
 		$wp_admin_bar->remove_menu('updates');
 	}
 
-
 	/**
 	* Clean up head
 	*/
@@ -66,7 +66,6 @@ class Dashboard {
 		remove_action('wp_head', 'recent_comments_style');
 	}
 
-
 	/**
     * Dashboard Footer Text
     */
@@ -74,7 +73,6 @@ class Dashboard {
 	{
 		echo '<i class="icon-logo"></i> Built in <a href="http://wordpress.org" target="_blank">Wordpress</a>. Crafted by <a href="http://object9.com" target="_blank">Object 9</a>.';
 	}
-
 
 	/**
 	* Dashboard Logo
@@ -133,6 +131,5 @@ class Dashboard {
 			if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
 		}
 	}
-
 
 }
