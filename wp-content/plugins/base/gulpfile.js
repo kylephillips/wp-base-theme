@@ -11,10 +11,12 @@ var uglify = require('gulp-uglify');
 // Style Paths
 var scss = [
 	'assets/scss/*',
-	'!assets/scss/login.scss'
+	'!assets/scss/login.scss',
+	'!assets/scss/admin-color/*'
 ]
 var css = 'assets/css/';
 var login_scss = 'assets/scss/login.scss';
+var scheme_scss = 'assets/scss/admin-color/*';
 
 // JS Paths
 var js_source = [
@@ -50,6 +52,20 @@ gulp.task('login_styles', function(){
 		.pipe(notify('Admin Login styles compiled & compressed.'));
 });
 
+
+/**
+* Admin Scheme Styles
+*/
+gulp.task('scheme_styles', function(){
+	return gulp.src(scheme_scss)
+		.pipe(sass({sourceComments: 'map', sourceMap: 'sass', style: 'compact'}))
+		.pipe(autoprefix('last 15 version'))
+		.pipe(minifycss({keepBreaks: false}))
+		.pipe(gulp.dest(css))
+		.pipe(plumber())
+		.pipe(notify('Admin Scheme styles compiled & compressed.'));
+});
+
 /**
 * Concatenate and uglify scripts
 */
@@ -70,9 +86,10 @@ gulp.task('watch', function(){
 	gulp.watch(scss, ['sass']);
 	gulp.watch(js_source, ['js']);
 	gulp.watch(login_scss, ['login_styles']);
+	gulp.watch(scheme_scss, ['scheme_styles']);
 });
 
 /**
 * Default
 */
-gulp.task('default', ['sass', 'js', 'watch', 'login_styles']);
+gulp.task('default', ['sass', 'js', 'watch', 'login_styles', 'scheme_styles']);

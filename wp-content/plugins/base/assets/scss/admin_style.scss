@@ -1,11 +1,12 @@
-/*!
-Custom WP Admin Theme
-*/
+//
+// Customized WP Admin
+// --------------------------------------------------
 
 // Variables & Mixins
 @import "_variables.scss";
 @import "_mixins.scss";
 
+@import "_admin-bar.scss";
 
 // Utitility Classes
 @import "_utilities.scss";

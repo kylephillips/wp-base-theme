@@ -9,6 +9,8 @@ class Dependencies
 	{
 		add_action( 'wp_enqueue_scripts', array($this, 'jquery'));
 		add_action( 'wp_enqueue_scripts', array($this, 'scripts'));
+		add_action( 'admin_enqueue_scripts', array($this, 'adminStyles'));
+		add_action( 'admin_init', array($this, 'colorScheme'));
 	}
 
 	/**
@@ -32,6 +34,32 @@ class Dependencies
 			array(),
 			'1.0',
 			true
+		);
+	}
+
+	/**
+	* Custom Admin Styles
+	*/
+	public function adminStyles()
+	{
+		global $base_plugin_directory;
+		wp_enqueue_style(
+			'custom-admin',
+			$base_plugin_directory . '/assets/css/admin_style.css'
+		);
+	}
+
+	/**
+	* Custom Admin Color Scheme
+	*/
+	public function colorScheme()
+	{
+		global $color_scheme;
+		global $base_plugin_directory;
+		wp_admin_css_color(
+		    'custom-scheme', $color_scheme,
+		   	$base_plugin_directory . '/assets/css/colors.css',
+		    array( '#000000', '#e72234', '#ebecec', '#456a7f' )
 		);
 	}
 

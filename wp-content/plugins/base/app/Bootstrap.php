@@ -31,6 +31,10 @@ class Bootstrap
 	{
 		global $base_plugin_directory;
 		$base_plugin_directory = plugins_url() . '/' . basename(dirname(dirname(__FILE__)));
+		global $color_scheme;
+		$color_scheme = __('Color Scheme Name');
+		global $plugin_short_name;
+		$plugin_short_name = __('base-plugin');
 	}
 
 	/**
