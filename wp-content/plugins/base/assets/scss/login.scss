@@ -1,0 +1,39 @@
+//
+// Login Page Styling
+// --------------------------------------------------
+
+// Variables & Mixins
+@import "_variables.scss";
+@import "_mixins.scss";
+
+body.login {
+	background-color: $login_background;
+}
+
+/**
+body.login div#login h1 a {
+    background-image: url(' . get_stylesheet_directory_uri() . '/assets/images/logo.svg);
+    padding-bottom: 30px;
+    background-size: 100%;
+    width: auto;
+    padding-bottom: 0;
+}*/
+
+body.login input[type="submit"] {
+	background-color: $blue;
+	color: $white;
+	box-shadow: none;
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+	font-size: 18px;
+	padding: 8px 0 !important;
+	height: auto !important;
+	border: 0;
+	border-radius: 0px;
+}
+body.login input[type="submit"]:hover {
+	background-color: $black;
+	color: $white;
+	box-shadow: none !important;
+}

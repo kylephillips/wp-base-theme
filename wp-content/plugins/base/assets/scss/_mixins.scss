@@ -1,0 +1,20 @@
+//
+// Mixins
+// --------------------------------------------------
+@mixin clearfix {
+	zoom: 1;
+	&:before,
+	&:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin unstyled {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}

@@ -27,6 +27,7 @@ wp-content/*
 # specify (see the commented-out examples for hints on how to do this.)
 wp-content/plugins/*
 !wp-content/plugins/base/
+wp-content/plugins/base/node_modules/*
  
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
