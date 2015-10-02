@@ -25,7 +25,7 @@ class TinyMce
 		$buttons = $this->removeButtons($remove, $buttons);
 
 		// Add buttons
-		$new_buttons = array('formatselect', 'styleselect', 'bold', 'italic', 'bullist', 'numlist', 'indent', 'outdent', 'link', 'unlink', 'blockquote', 'hr', 'subscript', 'superscript', 'wp_adv');
+		$new_buttons = array('formatselect', 'styleselect', 'bold', 'italic', 'bullist', 'numlist', 'indent', 'outdent', 'link', 'unlink', 'blockquote', 'hr', 'subscript', 'superscript', 'tablecontrols', 'wp_adv');
 		$buttons = $this->addButtons($new_buttons, $buttons);
 
 		return $buttons;
@@ -74,7 +74,6 @@ class TinyMce
 	*/
 	public function add_formats($init_array)
 	{
-
 		$style_formats = array(  
 			array(  
 				'title' => 'Drop Cap',  
@@ -88,9 +87,10 @@ class TinyMce
 				'classes' => 'checklist',
 				'selector' => 'ul',
 				'wrapper' => false
-			),
+			)
 		); 
 		$init_array['style_formats'] = json_encode( $style_formats );
+		$init_array['wordpress_adv_hidden'] = false;
 		return $init_array;
 	}
 
