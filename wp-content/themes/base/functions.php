@@ -54,23 +54,6 @@ add_action( 'tgmpa_register', 'mytheme_require_plugins' );
 function mytheme_require_plugins() {
  
     $plugins = array(
-		   // Commenting out these two since they require license keys
-		    /*array(
-		        'name'               => 'Advanced Custom Fields Pro',
-		        'slug'               => 'advanced-custom-fields-pro',
-		        'source'             => get_stylesheet_directory() . '/lib/plugins/advanced-custom-fields-pro.zip', // The "internal" source of the plugin
-		        'required'           => true, // this plugin is required
-		        'external_url'       => 'https://wordpress.org/plugins/advanced-custom-fields/', // page of my plugin
-		        'force_deactivation' => false, // deactivate this plugin when the user switches to another theme
-		    ),
-		    array(
-		        'name'               => 'Gravity Forms',
-		        'slug'               => 'gravity-forms',
-		        'source'             => get_stylesheet_directory() . '/lib/plugins/gravityforms_1.9.15.18.zip', // The "internal" source of the plugin
-		        'required'           => true, // this plugin is required
-		        'external_url'       => 'http://www.gravityforms.com//', // page of my plugin
-		        'force_deactivation' => false, // deactivate this plugin when the user switches to another theme
-		    ),*/
 		    array(
 		        'name'               => 'Nested Pages',
 		        'slug'               => 'wp-nested-pages',
@@ -110,7 +93,7 @@ function mytheme_require_plugins() {
         'menu'         => 'tgmpa-install-required-plugins', // menu slug
         'has_notices'  => true, // Show admin notices
         'dismissable'  => false, // the notices are NOT dismissable
-        'dismiss_msg'  => 'Please install these recommended plugins', // this message will be output at top of nag
+        'dismiss_msg'  => 'Please install these recommended plugins. Also, please install Gravity Forms Pro and Advanced Custom Fields Pro (license required)', // this message will be output at top of nag
         'is_automatic' => true, // automatically activate plugins after installation
         'message'      => '<!--Hey there.-->'// message to output right before the plugins table
     );
