@@ -34,4 +34,3 @@ wp-content/plugins/base/node_modules/*
 wp-content/themes/*
 !wp-content/themes/base/
 wp-content/themes/base/node_modules/*
-!wp-content/uploads/
