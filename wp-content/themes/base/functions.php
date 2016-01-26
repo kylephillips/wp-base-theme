@@ -45,6 +45,8 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 /**
 * Required plugins
+* Maganged through TGM Plugin Activation PHP Library
+* @link http://tgmpluginactivation.com/configuration/
 */ 
 require_once dirname( __FILE__ ) . '/lib/class-tgm-plugin-activation.php';
 function mytheme_require_plugins()
