@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+# The following redirect will pull from the specified domain's uploads directory.
+# This will eliminate the need to sync uploads to local dev environments.
+# Replace the domain with the live URI.
+# RedirectMatch 301 /wp-content/uploads/(.*) http://sample.com/wp-content/uploads//$1
+</IfModule>
