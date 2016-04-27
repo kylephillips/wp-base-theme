@@ -16,6 +16,7 @@ class Functions
 		add_filter('excerpt_more', array($this, 'excerpt_elipses'));
 		add_filter('edit_post_link', array($this, 'edit_button'));
 		add_filter( 'wpseo_metabox_prio', array($this, 'yoastToBottom') );
+		add_action( 'init', array($this, 'remove_yoast_notifications'));
 		$this->remove_yoast_columns();
 	}
 
@@ -64,6 +65,16 @@ class Functions
 		add_filter ( 'manage_edit-casestudy_columns', array($this, 'yoast_columns' ));
 		add_filter ( 'manage_edit-staff_columns', array($this, 'yoast_columns' ));
 		add_filter ( 'manage_edit-page_columns', array($this, 'yoast_columns' ));
+	}
+
+	/**
+ 	* Remove Yoast Notifications
+ 	*/
+	public function remove_yoast_notifications()
+	{
+		if ( ! class_exists( 'Yoast_Notification_Center' ) ) return;		
+		remove_action( 'admin_notices', array( \Yoast_Notification_Center::get(), 'display_notifications' ) );
+		remove_action( 'all_admin_notices', array( \Yoast_Notification_Center::get(), 'display_notifications' ) );
 	}
 
 	/**
