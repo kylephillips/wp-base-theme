@@ -3,7 +3,6 @@ var sass = require('gulp-sass');
 var autoprefix = require('gulp-autoprefixer');
 var livereload = require('gulp-livereload');
 var notify = require('gulp-notify');
-var plumber = require('gulp-plumber');
 var minifycss = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -35,7 +34,6 @@ gulp.task('sass', function(){
 		.pipe(autoprefix('last 15 version'))
 		.pipe(minifycss({keepBreaks: false}))
 		.pipe(gulp.dest(css))
-		.pipe(plumber())
 		.pipe(livereload())
 		.pipe(notify('Theme styles compiled & compressed.'));
 });
@@ -50,7 +48,6 @@ gulp.task('iestyles', function(){
 		.pipe(autoprefix('last 15 version'))
 		.pipe(minifycss({keepBreaks: false}))
 		.pipe(gulp.dest(iecss))
-		.pipe(plumber())
 		.pipe(notify('Theme IE styles compiled & compressed.'));
 });
 
@@ -70,7 +67,7 @@ gulp.task('js', function(){
 * Watch Task
 */
 gulp.task('watch', function(){
-	livereload.listen(8000);
+	livereload.listen();
 	gulp.watch(scss, ['sass']);
 	gulp.watch(js_source, ['js']);
 	gulp.watch(iescss, ['iestyles']);
