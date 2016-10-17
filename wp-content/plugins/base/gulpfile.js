@@ -3,7 +3,6 @@ var sass = require('gulp-sass');
 var autoprefix = require('gulp-autoprefixer');
 var livereload = require('gulp-livereload');
 var notify = require('gulp-notify');
-var plumber = require('gulp-plumber');
 var minifycss = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -33,7 +32,6 @@ gulp.task('sass', function(){
 		.pipe(autoprefix('last 15 version'))
 		.pipe(minifycss({keepBreaks: false}))
 		.pipe(gulp.dest(css))
-		.pipe(plumber())
 		.pipe(livereload())
 		.pipe(notify('Admin Theme styles compiled & compressed.'));
 });
@@ -48,7 +46,6 @@ gulp.task('login_styles', function(){
 		.pipe(autoprefix('last 15 version'))
 		.pipe(minifycss({keepBreaks: false}))
 		.pipe(gulp.dest(css))
-		.pipe(plumber())
 		.pipe(notify('Admin Login styles compiled & compressed.'));
 });
 
@@ -62,7 +59,6 @@ gulp.task('scheme_styles', function(){
 		.pipe(autoprefix('last 15 version'))
 		.pipe(minifycss({keepBreaks: false}))
 		.pipe(gulp.dest(css))
-		.pipe(plumber())
 		.pipe(notify('Admin Scheme styles compiled & compressed.'));
 });
 
