@@ -47,6 +47,7 @@ class Dashboard
 		$wp_admin_bar->remove_menu('menus');
 		$wp_admin_bar->remove_menu('comments');
 		$wp_admin_bar->remove_menu('updates');
+		$wp_admin_bar->remove_menu('wpseo-menu');
 	}
 
 	/**
