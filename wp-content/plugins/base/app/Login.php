@@ -1,10 +1,8 @@
 <?php 
-
 namespace Base;
 
 class Login 
 {
-
 	public function __construct()
 	{
 		add_action('login_enqueue_scripts', array($this, 'styleLogin'), 10);
@@ -22,5 +20,4 @@ class Login
             false
         );
 	}
-
 }

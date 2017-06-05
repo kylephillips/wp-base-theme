@@ -1,5 +1,4 @@
 <?php 
-
 namespace Base;
 
 /**
@@ -7,7 +6,6 @@ namespace Base;
 */
 class Functions 
 {
-
 	function __construct()
 	{
 		add_filter('nav_menu_css_class', array($this, 'clean_menus'), 100, 1);
@@ -93,5 +91,4 @@ class Functions
 		$output = str_replace('class="post-edit-link"', 'class="post-edit-link btn"', $output);
 		return $output;
 	}
-
 }

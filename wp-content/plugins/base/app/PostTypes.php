@@ -1,5 +1,4 @@
 <?php 
-
 namespace Base;
 
 /**
@@ -8,7 +7,6 @@ namespace Base;
 */
 class PostTypes 
 {
-
 	function __construct()
 	{
 		//$this->news();
@@ -40,5 +38,4 @@ class PostTypes
 		);
 		register_post_type( 'news' , $args );
 	}
-
 }

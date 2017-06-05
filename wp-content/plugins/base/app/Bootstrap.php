@@ -1,22 +1,11 @@
 <?php 
-
 namespace Base;
-
-use Base\TinyMce;
-use Base\PostTypes;
-use Base\Taxonomies;
-use Base\Dashboard;
-use Base\Functions;
-use Base\Dependencies;
-use Base\Login;
-use Base\Typekit;
 
 /**
 * Primary Plugin class
 */
 class Bootstrap 
 {
-
 	function __construct()
 	{
 		$this->defineGlobals();
@@ -58,5 +47,4 @@ class Bootstrap
 		new Dashboard;
 		new Dependencies;
 	}
-
 }

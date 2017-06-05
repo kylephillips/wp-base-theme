@@ -1,5 +1,4 @@
 <?php 
-
 namespace Base;
 
 /**
@@ -7,7 +6,6 @@ namespace Base;
 */
 class TinyMce 
 {
-
 	public function __construct()
 	{
 		add_filter('mce_buttons', array($this, 'buttonsOne') );
@@ -93,5 +91,4 @@ class TinyMce
 		$init_array['wordpress_adv_hidden'] = false;
 		return $init_array;
 	}
-
 }

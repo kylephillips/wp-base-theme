@@ -1,5 +1,4 @@
 <?php 
-
 namespace Base;
 
 /**
@@ -8,7 +7,6 @@ namespace Base;
 */
 class Taxonomies 
 {
-
 	public function __construct()
 	{
 		//$this->exampleCategory();
@@ -43,5 +41,4 @@ class Taxonomies
 			)
 		);
 	}
-
 }

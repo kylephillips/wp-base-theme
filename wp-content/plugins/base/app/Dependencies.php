@@ -1,10 +1,8 @@
 <?php 
-
 namespace Base;
 
 class Dependencies 
 {
-
 	public function __construct()
 	{
 		add_action( 'wp_enqueue_scripts', array($this, 'jquery'));
@@ -62,5 +60,4 @@ class Dependencies
 		    array( '#000000', '#e72234', '#ebecec', '#456a7f' )
 		);
 	}
-
 }

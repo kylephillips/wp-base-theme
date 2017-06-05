@@ -1,5 +1,4 @@
 <?php 
-
 namespace Base;
 
 /**
@@ -7,7 +6,6 @@ namespace Base;
 */
 class Typekit 
 {
-
 	/**
 	* Kit ID
 	*/
@@ -38,5 +36,4 @@ class Typekit
 		if ( !$this->kit_id ) return;
 		echo '<script>var typekit_id = "' . $this->kit_id . '";</script>';
 	}
-
 }

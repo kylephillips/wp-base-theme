@@ -1,5 +1,4 @@
 <?php 
-
 namespace Base;
 
 /**
@@ -7,7 +6,6 @@ namespace Base;
 */
 class Dashboard 
 {
-
 	function __construct()
 	{
 		add_action('wp_dashboard_setup', array($this, 'clean_dashboard'));
@@ -132,5 +130,4 @@ class Dashboard
 			if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
 		}
 	}
-
 }
