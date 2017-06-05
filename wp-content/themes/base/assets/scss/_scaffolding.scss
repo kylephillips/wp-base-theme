@@ -16,14 +16,13 @@ html {
 body {
 	font-family: $base-font-family;
 	background-color: $background;
-	font-size: 16px;
-	line-height: 26px;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
 	color: $black;
 	height: 100%;
 	overflow-x: hidden;
 	width: 100%;
 }
-
 
 // Reset fonts for relevant elements
 input,
@@ -34,19 +33,17 @@ textarea {
 	font-size: inherit;
 }
 
-
 a {
-	color: $blue;
+	color: $link-color;
 	text-decoration: none;
 	transition: all 200ms ease;
 	&:hover,
 	&:focus {
-		color: darken($blue, 20%);
+		color: darken($link-color, 20%);
 		text-decoration: none;
 		transition: all 200ms ease;
 	}
 }
-
 
 img {
 	vertical-align: middle;
@@ -58,18 +55,17 @@ img {
 	max-width: 1200px;
 	margin: 0 auto;
 	box-sizing: border-box;
-	padding: 0 20px;
+	padding: 0 1em;
 	clear: both;
 	@include clearfix();
 }
 
-
 // Selection Colors
 ::selection {
-	background: $blue;
-	color: #ffffff;
+	background: $black;
+	color: $white;
 }
 ::-moz-selection {
-	background: $blue;
-	color: #ffffff;
+	background: $black;
+	color: $white;
 }

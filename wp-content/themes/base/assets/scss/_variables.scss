@@ -4,10 +4,16 @@
 
 // Fonts
 $base-font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-
+$base-font-size: 16px;
+$base-line-height: 1.6;
 
 // Colors
 $white: #ffffff;
 $black: #000000;
 $background: #ffffff;
 $blue: #094e99;
+$link-color: $blue;
+
+// Paths
+$font-path: '../fonts';
+$image-path: '../images';
