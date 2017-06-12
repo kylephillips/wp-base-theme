@@ -19,7 +19,7 @@ class TinyMce
 	public function buttonsOne($buttons)
 	{
 		// Remove the defaults
-		$remove = array('strikethrough', 'wp_more', 'aligncenter','bold', 'italic', 'bullist', 'numlist', 'blockquote', 'hr', 'alignleft', 'alignright', 'link', 'unlink', 'wp_adv');
+		$remove = array('formatselect', 'strikethrough', 'wp_more', 'aligncenter','bold', 'italic', 'bullist', 'numlist', 'blockquote', 'hr', 'alignleft', 'alignright', 'link', 'unlink', 'wp_adv');
 		$buttons = $this->removeButtons($remove, $buttons);
 
 		// Add buttons
