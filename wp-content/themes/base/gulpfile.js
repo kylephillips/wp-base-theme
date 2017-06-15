@@ -15,8 +15,8 @@ var css = '';
 
 // JS Paths
 var js_source = [
-	'assets/js/src/jquery.fitvids.js',
-	'assets/js/src/scripts.js',
+	'assets/js/src/lib/jquery.fitvids.js',
+	'assets/js/src/theme.factory.js',
 ];
 var js_compiled = 'assets/js/';
 
