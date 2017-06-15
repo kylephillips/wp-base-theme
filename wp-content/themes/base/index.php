@@ -3,21 +3,22 @@
 <div class="container">
 <?php if ( have_posts()  ) : ?>
 
-	<ul class="post-archive-list">
+	<div class="post-archive-list">
 	<?php 
 		while ( have_posts() ) : the_post(); 
-			include('inc/archive-post-list.php');
+			get_template_part('partials/post', 'archive-listing');
 		endwhile;
 	?>
-	</ul>
+	</div>
 	
-	<?php include ('inc/nav.php' ); ?>
+	<?php get_template_part('partials/nav', 'basic'); ?>
 
 <?php else : ?>
 
-<h2>No Posts Found</h2>
+<h2><?php _e('No Posts Found', 'textdomain'); ?></h2>
 
 <?php endif; ?>
 </div><!-- .container -->
 
-<?php get_footer(); ?>
+<?php 
+get_footer();
