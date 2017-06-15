@@ -3,6 +3,7 @@
 * Theme Functions
 * See theme plugin for additional functionality
 */
+define('THEME_VERSION', '1.0');
 
 /**
 * Theme Support & Editor Styles
@@ -82,4 +83,3 @@ function mytheme_require_plugins()
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', 'mytheme_require_plugins' );
-?>

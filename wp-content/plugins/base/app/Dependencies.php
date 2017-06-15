@@ -30,7 +30,7 @@ class Dependencies
 			'scripts',
 			get_template_directory_uri() . '/assets/js/scripts.min.js',
 			array(),
-			'1.0',
+			THEME_VERSION,
 			true
 		);
 	}
