@@ -1,0 +1,67 @@
+//
+// Gravity Forms Styling
+// --------------------------------------------------
+.gform_validation_container {
+	display: none;
+}
+
+ul.gform_fields {
+	@include unstyled;
+	@include clearfix;
+}
+
+li.gfield {
+	float: left;
+	width: 48%;
+	clear: both;
+	&.right {
+		float: right;
+		clear: none;
+	}
+	&.full {
+		float: none;
+		width: 100%;
+	}
+}
+
+.gfield_required {
+	color: $red;
+}
+
+ul.gfield_checkbox,
+ul.gfield_radio {
+	@include unstyled;
+	li {
+		margin: 0;
+	}
+}
+
+
+// Form Errors
+.gfield_error {
+	input[type="text"],
+	input[type="email"],
+	input[type="search"],
+	input[type="tel"],
+	textarea {
+		border-color: $red;
+		background-color: rgba($red, .1);
+	}
+}
+
+.validation_message {
+	color: $red;
+	font-size: $small;
+	font-style: oblique;
+}
+
+.validation_error {
+	@extend .alert;
+	@extend .alert-error;
+}
+
+// Form Success
+.gform_confirmation_message {
+	@extend .alert;
+	@extend .alert-success;
+}

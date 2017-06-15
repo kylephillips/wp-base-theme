@@ -7,13 +7,34 @@ $base-font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $base-font-size: 16px;
 $base-line-height: 1.6;
 
+// Font Weights
+$bold: bold;
+
+// Font Sizes
+$small: 0.88em;
+$smaller: 0.8em;
+$large: 1.1em;
+$larger: 1.25em;
+
 // Colors
 $white: #ffffff;
 $black: #000000;
+$true-black: #000000;
 $background: #ffffff;
 $blue: #094e99;
+$red: #d9534f;
+$green: #5cb85c;
 $link-color: $blue;
+$hr: darken($white, 20%);
+$border: darken($white, 25%);
+
+// Borders
+$gray-border: 1px solid $border;
 
 // Paths
-$font-path: '../fonts';
-$image-path: '../images';
+$font-path: 'assets/fonts';
+$image-path: 'assets/images';
+
+// Breakpoints
+$mobile: '(max-width: 767px)';
+$desktop: '(min-width: 768px)';

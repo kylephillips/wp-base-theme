@@ -1,0 +1,22 @@
+//
+// Alerts
+// --------------------------------------------------
+.alert {
+	display: block;
+	border: $gray-border;
+	background-color: $white;
+	padding: .5em;
+	border-left: 4px solid $blue;
+	margin-bottom: 1em;
+	p {
+		margin: 0;
+	}
+} // .alert
+
+.alert-error {
+	border-left-color: $red;
+}
+
+.alert-success {
+	border-left-color: $green;
+}

@@ -1,0 +1,81 @@
+//
+// Base Form Styles
+// --------------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+textarea {
+	@include appearance;
+	width: 100%;
+	border: $gray-border;
+	background-color: $white;
+	height: 3em;
+	padding: 0 .5em;
+	&:focus {
+		outline: none;
+	}
+	&:disabled {
+		background-color: darken($white, 15%);
+		color: darken($white, 50%);
+		cursor: not-allowed;
+	}
+}
+textarea {
+	height: auto;
+}
+
+input[type="checkbox"]{
+	@include appearance;
+	width: 20px;
+	height: 20px;
+	background-color: $white;
+	margin: 0;
+	border: $gray-border;
+	cursor: pointer;
+	position: relative;
+	outline: none;
+	top: 4px;
+	box-shadow: inset 1px 1px 1px 0px rgba($true-black, .15);
+	&:checked {
+		box-shadow: none;
+	}
+	&:checked:after {
+		position: absolute;
+		content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1'><path fill='#000000' width='20' height='20' d='M15.3,3.7L8,11.1L4.5,7.7L2,10.1L8,16l9.9-9.9L15.3,3.7z'/></svg>");
+		color: $black;
+		display: block;
+		left: -1px;
+		top: -1px;
+	}
+	&:disabled {
+		opacity: .5;
+		cursor: not-allowed;
+	}
+} // checkbox
+
+input[type="radio"] {
+	@include appearance;
+	margin: 0 5px 0 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: $white;
+	border: $gray-border;
+	cursor: pointer;
+	position: relative;
+	top: 4px;
+	outline: none;
+	box-shadow: inset 1px 1px 1px 0px rgba($true-black, .15);
+	&:checked:after {
+		position: absolute;
+		display: block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		left: 5px;
+		top: 5px;
+		background-color: $black;
+		content: "";
+	}
+} // Radio

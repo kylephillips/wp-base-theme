@@ -18,3 +18,13 @@
 	margin: 0;
 	padding: 0;
 }
+
+@mixin smooth {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin appearance {
+	-webkit-appearance: none;
+	appearance: none;
+}

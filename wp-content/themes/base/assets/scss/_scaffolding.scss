@@ -35,12 +35,10 @@ textarea {
 
 a {
 	color: $link-color;
-	text-decoration: none;
 	transition: all 200ms ease;
 	&:hover,
 	&:focus {
 		color: darken($link-color, 20%);
-		text-decoration: none;
 		transition: all 200ms ease;
 	}
 }
