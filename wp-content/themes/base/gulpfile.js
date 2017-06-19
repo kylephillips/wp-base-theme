@@ -6,6 +6,7 @@ var notify = require('gulp-notify');
 var minifycss = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 // Style Paths
 var scss = [
@@ -23,26 +24,30 @@ var js_compiled = 'assets/js/';
 /**
 * Smush the front end Styles and output
 */
-gulp.task('sass', function(){
-	return gulp.src(scss)
-		.pipe(sass({sourceComments: 'map', sourceMap: 'sass', style: 'compact'}))
-		.pipe(autoprefix('last 15 version'))
-		.pipe(minifycss({keepBreaks: false}))
-		.pipe(gulp.dest(css))
-		.pipe(livereload())
-		.pipe(notify('Theme styles compiled & compressed.'));
+gulp.task('sass', function(callback){
+	pump([
+		gulp.src(scss),
+		sass({sourceComments: 'map', sourceMap: 'sass', style: 'compact'}),
+		autoprefix('last 15 version'),
+		minifycss({keepBreaks: false}),
+		gulp.dest(css),
+		livereload(),
+		notify('Theme styles compiled & compressed.')
+	], callback);
 });
 
 /**
 * Concatenate and uglify scripts
 */
-gulp.task('js', function(){
-	return gulp.src(js_source)
-		.pipe(concat('scripts.min.js'))
-		.pipe(gulp.dest(js_compiled))
-		.pipe(uglify())
-		.pipe(gulp.dest(js_compiled))
-		.pipe(notify('Theme scripts compiles & compressed.'));
+gulp.task('js', function(callback){
+	pump([
+		gulp.src(js_source),
+		concat('scripts.min.js'),
+		gulp.dest(js_compiled),
+		uglify(),
+		gulp.dest(js_compiled),
+		notify('Theme scripts compiles & compressed.')
+	], callback);
 });
 
 /**
