@@ -23,7 +23,7 @@ class TinyMce
 		$buttons = $this->removeButtons($remove, $buttons);
 
 		// Add buttons
-		$new_buttons = array('formatselect', 'styleselect', 'bold', 'italic', 'bullist', 'numlist', 'indent', 'outdent', 'link', 'unlink', 'blockquote', 'hr', 'subscript', 'superscript', 'tablecontrols', 'wp_adv');
+		$new_buttons = array('formatselect', 'styleselect', 'aligncenter', 'alignleft', 'bold', 'italic', 'bullist', 'numlist', 'indent', 'outdent', 'link', 'unlink', 'blockquote', 'hr', 'subscript', 'superscript', 'tablecontrols', 'wp_adv');
 		$buttons = $this->addButtons($new_buttons, $buttons);
 
 		return $buttons;
