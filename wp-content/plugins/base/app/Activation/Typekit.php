@@ -1,5 +1,5 @@
 <?php 
-namespace Base;
+namespace Base\Activation;
 
 /**
 * Enables Typekit in Visual Editor

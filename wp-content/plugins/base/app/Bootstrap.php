@@ -31,10 +31,10 @@ class Bootstrap
 	*/
 	public function wordpressInit()
 	{
-		$post_types = new PostTypes;
-		$taxonomies = new Taxonomies;
-		$tinymce = new TinyMce;
-		$typekit = new Typekit(null); // Add Kit ID to enable typekit in the visual editor/TinyMCE
+		$post_types = new WPData\PostTypes;
+		$taxonomies = new WPData\Taxonomies;
+		$tinymce = new AdminDisplay\TinyMce;
+		$typekit = new Activation\Typekit(null); // Add Kit ID to enable typekit in the visual editor/TinyMCE
 	}
 
 	/**
@@ -42,9 +42,10 @@ class Bootstrap
 	*/
 	public function pluginInit()
 	{
-		new Login;
-		new Functions;
-		new Dashboard;
-		new Dependencies;
+		new AdminDisplay\Login;
+		new AdminDisplay\Yoast;
+		new Display\Display;
+		new AdminDisplay\Dashboard;
+		new Activation\Dependencies;
 	}
 }

@@ -1,5 +1,5 @@
 <?php 
-namespace Base;
+namespace Base\AdminDisplay;
 
 /**
 * Edit TinyMCE/Add formats
