@@ -11,4 +11,3 @@ License: GPL
 $loader = require_once 'vendor/autoload.php';
 require_once('app/Bootstrap.php');
 $base_plugin = new Base\Bootstrap;
-?>

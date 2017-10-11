@@ -5,10 +5,10 @@ class Dependencies
 {
 	public function __construct()
 	{
-		add_action( 'wp_enqueue_scripts', array($this, 'jquery'));
-		add_action( 'wp_enqueue_scripts', array($this, 'scripts'));
-		add_action( 'admin_enqueue_scripts', array($this, 'adminStyles'));
-		add_action( 'admin_init', array($this, 'colorScheme'));
+		add_action( 'wp_enqueue_scripts', [$this, 'jquery']);
+		add_action( 'wp_enqueue_scripts', [$this, 'scripts']);
+		add_action( 'admin_enqueue_scripts', [$this, 'adminStyles']);
+		add_action( 'admin_init', [$this, 'colorScheme']);
 	}
 
 	/**
@@ -57,7 +57,7 @@ class Dependencies
 		wp_admin_css_color(
 		    'custom-scheme', $color_scheme,
 		   	$base_plugin_directory . '/assets/css/colors.css',
-		    array( '#000000', '#e72234', '#ebecec', '#456a7f' )
+		    [ '#000000', '#e72234', '#ebecec', '#456a7f' ]
 		);
 	}
 }

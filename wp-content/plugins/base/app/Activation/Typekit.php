@@ -15,8 +15,8 @@ class Typekit
 	{
 		$this->kit_id = $kit_id;
 		if ( !$kit_id ) return;
-		add_filter( 'mce_external_plugins', array($this, 'addTypekit') );
-		add_action('admin_head', array($this, 'adminHeadGlobals'));
+		add_filter( 'mce_external_plugins', [$this, 'addTypekit']);
+		add_action('admin_head', [$this, 'adminHeadGlobals']);
 	}
 
 	/**

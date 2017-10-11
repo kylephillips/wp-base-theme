@@ -3,7 +3,6 @@ namespace Base\WPData;
 
 /**
 * Post Types
-* Add a method for each post type required and call in the constructor
 */
 class PostTypes 
 {
@@ -17,14 +16,14 @@ class PostTypes
 	*/
 	private function news()
 	{
-		$labels = array(
+		$labels = [
 			'name' => __('News'),  
 			'singular_name' => __('News Item'),
 			'add_new_item'=> 'Add News Item',
 			'edit_item' => 'Edit News Item',
 			'view_item' => 'View News Item'
-		);
-		$args = array(
+		];
+		$args = [
 			'labels' => $labels,
 			'public' => true,  
 			'show_ui' => true,
@@ -33,9 +32,9 @@ class PostTypes
 			'has_archive' => true,
 			'publicly_queryable' => true,
 			'query_var' => true,
-			'supports' => array('title','thumbnail','editor','excerpt'),
-			'rewrite' => array('slug' => 'news', 'with_front' => false)
-		);
+			'supports' => ['title','thumbnail','editor','excerpt'],
+			'rewrite' => ['slug' => 'news', 'with_front' => false]
+		];
 		register_post_type( 'news' , $args );
 	}
 }

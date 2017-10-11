@@ -8,9 +8,9 @@ class TinyMce
 {
 	public function __construct()
 	{
-		add_filter('mce_buttons', array($this, 'buttonsOne') );
-		add_filter('mce_buttons_2', array($this, 'buttonsTwo') );
-		add_filter( 'tiny_mce_before_init', array($this, 'add_formats' ));
+		add_filter('mce_buttons', [$this, 'buttonsOne']);
+		add_filter('mce_buttons_2', [$this, 'buttonsTwo']);
+		add_filter( 'tiny_mce_before_init', [$this, 'addFormats']);
 	}
 
 	/**
@@ -19,11 +19,11 @@ class TinyMce
 	public function buttonsOne($buttons)
 	{
 		// Remove the defaults
-		$remove = array('formatselect', 'strikethrough', 'wp_more', 'aligncenter','bold', 'italic', 'bullist', 'numlist', 'blockquote', 'hr', 'alignleft', 'alignright', 'link', 'unlink', 'wp_adv');
+		$remove = ['formatselect', 'strikethrough', 'wp_more', 'aligncenter','bold', 'italic', 'bullist', 'numlist', 'blockquote', 'hr', 'alignleft', 'alignright', 'link', 'unlink', 'wp_adv'];
 		$buttons = $this->removeButtons($remove, $buttons);
 
 		// Add buttons
-		$new_buttons = array('formatselect', 'styleselect', 'aligncenter', 'alignleft', 'bold', 'italic', 'bullist', 'numlist', 'indent', 'outdent', 'link', 'unlink', 'blockquote', 'hr', 'subscript', 'superscript', 'tablecontrols', 'wp_adv');
+		$new_buttons = ['formatselect', 'styleselect', 'aligncenter', 'alignleft', 'bold', 'italic', 'bullist', 'numlist', 'indent', 'outdent', 'link', 'unlink', 'blockquote', 'hr', 'subscript', 'superscript', 'tablecontrols', 'wp_adv'];
 		$buttons = $this->addButtons($new_buttons, $buttons);
 
 		return $buttons;
@@ -34,7 +34,7 @@ class TinyMce
 	*/
 	public function buttonsTwo($buttons)
 	{
-		$remove = array('forecolor', 'underline', 'alignjustify','formatselect','undo','redo', 'indent', 'outdent');
+		$remove = ['forecolor', 'underline', 'alignjustify','formatselect','undo','redo', 'indent', 'outdent'];
 		$buttons = $this->removeButtons($remove, $buttons);
 		return $buttons;
 	}
@@ -70,23 +70,23 @@ class TinyMce
 	/**
 	* Add custom formats
 	*/
-	public function add_formats($init_array)
+	public function addFormats($init_array)
 	{
-		$style_formats = array(  
-			array(  
+		$style_formats = [ 
+			[
 				'title' => 'Drop Cap',  
 				'inline' => 'span',  
 				'classes' => 'dropcap',
 				'wrapper' => true,
-			),
-			array(
+			],
+			[
 				'title' => 'Checklist',
 				'block' => 'ul',
 				'classes' => 'checklist',
 				'selector' => 'ul',
 				'wrapper' => false
-			)
-		); 
+			]
+		]; 
 		$init_array['style_formats'] = json_encode( $style_formats );
 		$init_array['wordpress_adv_hidden'] = false;
 		return $init_array;

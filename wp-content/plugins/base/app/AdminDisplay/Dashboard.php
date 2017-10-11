@@ -8,19 +8,19 @@ class Dashboard
 {
 	function __construct()
 	{
-		add_action('wp_dashboard_setup', array($this, 'clean_dashboard'));
-		add_action('wp_before_admin_bar_render', array($this, 'admin_bar'));
-		add_action('init', array($this, 'clean_head'));
 		remove_action('wp_head', 'wp_generator');
-		add_filter('admin_footer_text', array($this, 'dashboard_footer'));
-		//add_action('admin_head', array($this, 'admin_logo'));
-		//add_action('admin_menu', array($this, 'remove_menus'));
+		add_action('wp_dashboard_setup', [$this, 'cleanDashboard']);
+		add_action('wp_before_admin_bar_render', [$this, 'adminBar']);
+		add_action('init', [$this, 'cleanHead']);
+		add_filter('admin_footer_text', [$this, 'dashboardFooter']);
+		//add_action('admin_head', array($this, 'adminLogo'));
+		//add_action('admin_menu', array($this, 'removeMenus'));
 	}
 
 	/**
 	* Clean up the dashboard landing
 	*/
-	public function clean_dashboard()
+	public function cleanDashboard()
 	{
 		global $wp_meta_boxes, $current_user;
 		unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
@@ -33,7 +33,7 @@ class Dashboard
 	/**
 	* Clean up the admin bar
 	*/
-	public function admin_bar()
+	public function adminBar()
 	{
 		global $wp_admin_bar;
 		$wp_admin_bar->remove_menu('wporg');
@@ -51,7 +51,7 @@ class Dashboard
 	/**
 	* Clean up head
 	*/
-	public function clean_head()
+	public function cleanHead()
 	{
 		remove_action('wp_head', 'rsd_link');
 		remove_action('wp_head', 'wlwmanifest_link');
@@ -68,7 +68,7 @@ class Dashboard
 	/**
     * Dashboard Footer Text
     */
-	public function dashboard_footer()
+	public function dashboardFooter()
 	{
 		echo '<i class="icon-logo"></i> Built in <a href="http://wordpress.org" target="_blank">Wordpress</a>. Crafted by <a href="http://object9.com" target="_blank">Object 9</a>.';
 	}
@@ -76,7 +76,7 @@ class Dashboard
 	/**
 	* Dashboard Logo
 	*/
-	public function admin_logo()
+	public function adminLogo()
 	{
 		global $base_plugin_directory;
 		$path = $base_plugin_directory;
@@ -120,10 +120,10 @@ class Dashboard
 	/**
 	* Remove Unneccessary Menu Items
 	*/
-	public function remove_menus()
+	public function removeMenus()
 	{
 		global $menu;
-		$restricted = array(__('Comments'));
+		$restricted = [__('Comments')];
 		end ($menu);
 		while (prev($menu)){
 			$value = explode(' ',$menu[key($menu)][0]);

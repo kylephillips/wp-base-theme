@@ -3,21 +3,20 @@ namespace Base\WPData;
 
 /**
 * Register Taxonomies
-* Add a method for each taxonomy required and call in the constructor
 */
 class Taxonomies 
 {
 	public function __construct()
 	{
-		//$this->exampleCategory();
+		//$this->exampleTaxonomy();
 	}
 
 	/**
-	* Case Study Types
+	* Taxonomy Example
 	*/
-	private function exampleCategory()
+	private function exampleTaxonomy()
 	{
-		$labels = array(
+		$labels = [
 			'name'				=>	__( 'Example Categories'),
 			'singular_name'		=>	__( 'Example Category'),
 			'search_items'		=>	__( 'Search Example Categories' ),
@@ -29,16 +28,16 @@ class Taxonomies
 			'add_new_item'		=>	__( 'Add New Example Category' ),
 			'new_item_name'		=>	__( 'New Example Category' ),
 			'menu_name'			=>	__( 'Example Categories' ),
-		);
+		];
 		register_taxonomy(
 			"example-categories", 
-			array("post"), 
-			array(
+			["post"], 
+			[
 				"hierarchical" => true, 
 				"labels"	=>	$labels,
 				'has_archive' => true,
-				'rewrite' => array('slug' => 'example-categories', 'with_front' => false)
-			)
+				'rewrite' => ['slug' => 'example-categories', 'with_front' => false]
+			]
 		);
 	}
 }

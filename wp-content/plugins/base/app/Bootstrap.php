@@ -9,7 +9,7 @@ class Bootstrap
 	function __construct()
 	{
 		$this->defineGlobals();
-		add_action('init', array($this, 'wordpressInit'));
+		add_action('init', [$this, 'wordpressInit']);
 		$this->pluginInit();
 	}
 

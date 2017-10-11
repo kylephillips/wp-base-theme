@@ -5,7 +5,7 @@ class Login
 {
 	public function __construct()
 	{
-		add_action('login_enqueue_scripts', array($this, 'styleLogin'), 10);
+		add_action('login_enqueue_scripts', [$this, 'styleLogin'], 10);
 	}
 
 	/**
