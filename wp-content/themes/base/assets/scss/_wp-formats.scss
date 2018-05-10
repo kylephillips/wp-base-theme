@@ -4,34 +4,69 @@
 .alignleft {
 	float: left;
 	width: 45%;
-	margin: 0 20px 20px 0;
+	margin: .5em 1.5em 1em 0;
 }
 .alignright {
 	float: right;
 	width: 45%;
-	margin: 0 0 20px 20px;
+	margin: .5em 0 1em 1.5em;
 }
 .alignnone {
-	width: 100%;
+	width: 130%;
+	margin-left: -15%;
+	margin-bottom: 2em;
 }
-.wp-caption {
+
+.wp-caption,
+.wp-block-image {
 	margin: 0;
-	&.alignnone {
-		width: 100% !important;
+	&.alignnone,
+	&.alignwide {
+		width: 130% !important;
+		padding-top: 2em;
+		margin-left: -15%;
+		margin-bottom: 3em;
+		text-align: center;
+		img {
+			width: 100%;
+		}
 	}
 	&.alignleft, &.alignright {
 		width: 45% !important;
 	}
 	&.alignleft {
-		margin: 0 20px 20px 0;
+		margin: .5em 1.5em 1em 0;
+	}
+	&.alignright {
+		margin: .5em 0 1em 1.5em;
 	}
 	img {
 		width: 100%;
+		margin-bottom: .5em;
 	}
-	p {
-		font-size: 14px;
+	p, figcaption {
+		font-size: .75em;
+		line-height: 1.3;
 		font-style: oblique;
 	}
+}
+
+.wp-block-button.alignnone {
+	width: auto;
+	margin: 1em 0;
+}
+
+// Dropcaps
+p.has-drop-cap:first-letter,
+p.has-drop-cap:not(:focus):first-letter {
+	float: left;
+	font-weight: bold;
+	font-size: 3.5em;
+	line-height: .8;
+	padding-top: .1em;
+	padding-right: .2em;
+	font-family: $base-font-family;
+	margin: 0;
 }
 
 

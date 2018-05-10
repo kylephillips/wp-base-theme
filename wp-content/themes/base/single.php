@@ -1,8 +1,8 @@
 <?php 
 get_header(); 
 if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="container">
-	<h2><?php the_title(); ?></h2>
+<div class="container small">
+	<h1><?php the_title(); ?></h1>
 	<?php the_content(); ?>
 </div>
 <?php 

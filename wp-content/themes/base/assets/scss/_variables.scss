@@ -4,8 +4,8 @@
 
 // Fonts
 $base-font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$base-font-size: 16px;
-$base-line-height: 1.6;
+$base-font-size: 18px;
+$base-line-height: 1.8;
 
 // Font Weights
 $bold: bold;
@@ -34,6 +34,10 @@ $gray-border: 1px solid $border;
 // Paths
 $font-path: 'assets/fonts';
 $image-path: 'assets/images';
+
+// Element Sizes
+$container-width: 1200px;
+$container-width-small: 850px;
 
 // Breakpoints
 $mobile: '(max-width: 767px)';

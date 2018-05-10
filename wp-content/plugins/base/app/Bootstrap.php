@@ -31,10 +31,11 @@ class Bootstrap
 	*/
 	public function wordpressInit()
 	{
-		$post_types = new WPData\PostTypes;
-		$taxonomies = new WPData\Taxonomies;
-		$tinymce = new AdminDisplay\TinyMce;
-		$typekit = new Activation\Typekit(null); // Add Kit ID to enable typekit in the visual editor/TinyMCE
+		new WPData\PostTypes;
+		new WPData\Taxonomies;
+		new AdminDisplay\TinyMce;
+		new Gutenberg\Support;
+		new Activation\Typekit(null); // Add Kit ID to enable typekit in the visual editor/TinyMCE
 	}
 
 	/**

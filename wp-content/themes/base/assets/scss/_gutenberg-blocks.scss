@@ -1,0 +1,40 @@
+//
+// Specific Gutenberg Overrides
+// --------------------------------------------------
+.editor-block-list__layout .editor-block-list__block ::selection {
+	background: $black;
+	color: $white;
+}
+
+.editor-block-list__block,
+.editor-post-title {
+	max-width: $container-width-small;
+}
+.editor-post-title {
+	padding: 0;
+	textarea {
+		@extend h1;
+	}
+}
+.editor-block-list__layout .editor-block-list__block .editor-block-list__block-edit {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.editor-block-list__layout .editor-block-list__block[data-align=left] .editor-block-list__block-edit,
+.editor-block-list__layout .editor-block-list__block[data-align=right] .editor-block-list__block-edit {
+	width: 45%;
+	figcaption {
+		text-align: left;
+		color: $black;
+	}
+}
+.editor-block-list__layout .editor-block-list__block[data-type="core/separator"] {
+	text-align: center;
+	.wp-block-separator {
+		max-width: none;
+	}
+}
+
+.editor-block-list__block[data-type="core/button"]{
+	margin: 1em auto;
+}

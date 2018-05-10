@@ -1,6 +1,17 @@
 //
 // Buttons
 // --------------------------------------------------
-.btn {
+.btn,
+.wp-block-button__link {
 	display: inline-block;
+	background-color: $blue;
+	color: $white;
+	text-decoration: none;
+	padding: 1em 1.5em;
+	font-weight: $bold;
+	border-radius: 0;
+	&:hover {
+		color: $white;
+		background-color: $black;
+	}
 }

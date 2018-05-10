@@ -50,12 +50,15 @@ img {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: $container-width;
 	margin: 0 auto;
 	box-sizing: border-box;
 	padding: 0 1em;
 	clear: both;
 	@include clearfix();
+	&.small {
+		max-width: $container-width-small;
+	}
 }
 
 // Selection Colors
