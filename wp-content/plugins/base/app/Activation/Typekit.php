@@ -15,8 +15,9 @@ class Typekit
 	{
 		$this->kit_id = $kit_id;
 		if ( !$kit_id ) return;
-		add_filter( 'mce_external_plugins', [$this, 'addTypekit']);
+		add_filter('mce_external_plugins', [$this, 'addTypekit']);
 		add_action('admin_head', [$this, 'adminHeadGlobals']);
+		add_action('wp_enqueue_scripts', [$this, 'publicStyles']);
 	}
 
 	/**
@@ -36,5 +37,19 @@ class Typekit
 	{
 		if ( !$this->kit_id ) return;
 		echo '<script>var typekit_id = "' . $this->kit_id . '";</script>';
+	}
+
+	/**
+	* Enqueue the Front End Style
+	*/
+	public function publicStyles()
+	{
+		wp_enqueue_style(
+			'typekit',
+			'https://use.typekit.net/' . $this->kit_id . '.css',
+			[],
+			'',
+			'all'
+		);
 	}
 }
