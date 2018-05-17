@@ -8,7 +8,6 @@
 	<title><?php wp_title('-'); ?></title>
 	<?php wp_site_icon(); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=<?php echo THEME_VERSION; ?>">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

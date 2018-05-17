@@ -7,6 +7,7 @@ class Dependencies
 	{
 		add_action( 'wp_enqueue_scripts', [$this, 'jquery']);
 		add_action( 'wp_enqueue_scripts', [$this, 'scripts']);
+		add_action( 'wp_enqueue_scripts', [$this, 'styles']);
 		add_action( 'admin_enqueue_scripts', [$this, 'adminStyles']);
 		add_action( 'admin_init', [$this, 'colorScheme']);
 	}
@@ -32,6 +33,19 @@ class Dependencies
 			array(),
 			THEME_VERSION,
 			true
+		);
+	}
+
+	/**
+	* Theme Styles – enqueue any unminified styles needed here
+	*/
+	public function styles()
+	{
+		wp_enqueue_style(
+			'theme-styles',
+			get_stylesheet_uri(),
+			array(),
+			THEME_VERSION
 		);
 	}
 

@@ -17,3 +17,6 @@ If running the accompanying plugin, PHP v5.3.2 or higher is required.
 3. Rename namespace in classes under `app/`
 4. Run `composer install` to build the autoloader
 5. Add post types/taxonomies as needed in their respective classes
+
+## Repository Setup
+1. Edit `.gitignore` to include the new folder paths after completing the steps above.
