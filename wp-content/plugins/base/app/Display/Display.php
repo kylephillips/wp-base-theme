@@ -21,7 +21,7 @@ class Display
 	*/
 	public function disablePingbacks($methods)
 	{
-		unsset( $methods['pingback.ping'] );
+		unset( $methods['pingback.ping'] );
 		return $methods;
 	}
 
