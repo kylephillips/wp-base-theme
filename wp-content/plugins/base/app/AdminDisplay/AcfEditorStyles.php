@@ -16,7 +16,7 @@ class AcfEditorStyles
 		global $base_plugin_directory;
 		wp_enqueue_script(
 			'acf-wysiwyg-styles',
-			$base_plugin_directory . '/assets/js/acf-wysiwyg.js'
+			$base_plugin_directory . '/assets/js/acf-wysiwyg-editor.js'
 		);
 	}
 }
