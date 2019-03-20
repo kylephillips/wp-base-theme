@@ -35,6 +35,7 @@ class Bootstrap
 		new WPData\Taxonomies;
 		new AdminDisplay\TinyMce;
 		new Gutenberg\Support;
+		new Display\Emojis;
 		new Activation\Typekit(null); // Add Kit ID to enable typekit in the visual editor/TinyMCE
 	}
 
