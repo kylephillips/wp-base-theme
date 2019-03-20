@@ -11,3 +11,4 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php do_action('wp_body_opening'); ?>

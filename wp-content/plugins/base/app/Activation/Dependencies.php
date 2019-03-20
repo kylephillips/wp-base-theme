@@ -10,6 +10,9 @@ class Dependencies
 		add_action( 'wp_enqueue_scripts', [$this, 'styles']);
 		add_action( 'admin_enqueue_scripts', [$this, 'adminStyles']);
 		add_action( 'admin_init', [$this, 'colorScheme']);
+		add_action( 'wp_head', [$this, 'headScripts']);
+		add_action( 'wp_footer', [$this, 'footerScripts']);
+		add_action( 'wp_body_opening', [$this, 'bodyScripts']);
 	}
 
 	/**
@@ -73,5 +76,35 @@ class Dependencies
 		   	$base_plugin_directory . '/assets/css/colors.css',
 		    [ '#000000', '#e72234', '#ebecec', '#456a7f' ]
 		);
+	}
+
+	/**
+	* Head Scripts
+	*/
+	public function headScripts()
+	{
+		if ( !function_exists('get_field') ) return;
+		$scripts = get_field('head_scripts', 'option');
+		if ( $scripts ) echo $scripts;
+	}
+
+	/**
+	* Footer Scripts
+	*/
+	public function footerScripts()
+	{
+		if ( !function_exists('get_field') ) return;
+		$scripts = get_field('footer_scripts', 'option');
+		if ( $scripts ) echo $scripts;
+	}
+
+	/**
+	* Body Scripts
+	*/
+	public function bodyScripts()
+	{
+		if ( !function_exists('get_field') ) return;
+		$scripts = get_field('body_scripts', 'option');
+		if ( $scripts ) echo $scripts;
 	}
 }
