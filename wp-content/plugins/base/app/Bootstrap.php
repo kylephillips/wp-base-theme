@@ -48,5 +48,6 @@ class Bootstrap
 		new AdminDisplay\Dashboard;
 		new Activation\Dependencies;
 		new AdminDisplay\AcfEditorStyles;
+		new User\ProfileSettings;
 	}
 }
