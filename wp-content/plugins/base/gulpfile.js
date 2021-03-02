@@ -77,8 +77,8 @@ var scripts = function(){
 gulp.task('watch', function(){
 	livereload.listen();
 	gulp.watch(scss, gulp.series(styles));
-	gulp.watch(scss, gulp.series(login_styles));
-	gulp.watch(scss, gulp.series(scheme_styles));
+	gulp.watch(login_scss, gulp.series(login_styles));
+	gulp.watch(scheme_scss, gulp.series(scheme_styles));
 	gulp.watch(js_source, gulp.series(scripts));
 });
 
