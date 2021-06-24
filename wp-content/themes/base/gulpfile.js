@@ -12,9 +12,7 @@ var pump = require('pump');
 var scss = [
 	'assets/scss/*',
 ]
-var css = function(){
-	return '../base/';
-};
+var css = __dirname;
 
 // JS Paths
 var js_source = [
