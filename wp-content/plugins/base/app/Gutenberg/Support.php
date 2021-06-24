@@ -11,7 +11,7 @@ class Support
 		add_action('enqueue_block_editor_assets', [$this, 'editorStyles']);
 		add_action('wp_print_styles', [$this, 'removeFrontEndStyles']);
 		add_theme_support('align-wide');
-		// $this->addColorChoices();
+		$this->addColorChoices();
 		add_action('enqueue_block_editor_assets', [$this, 'editorScripts']);
 	}
 
@@ -56,20 +56,6 @@ class Support
 	public function addColorChoices()
 	{
 		add_theme_support('disable-custom-colors');
-		add_theme_support('editor-color-palette',
-			[
-		        'name' => 'Blue',
-		        'color' => '#082a68',
-		    ],[
-		        'name' => 'Red',
-		        'color' => '#c4133b',
-		    ],[
-		        'name' => 'Green',
-		        'color' => '#5cb85c',
-		    ],[
-		        'name' => 'Black',
-		        'color' => '#444444',
-		    ]
-		);
+		add_theme_support('editor-color-palette', THEME_COLORS);
 	}
 }
