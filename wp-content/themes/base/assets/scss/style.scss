@@ -8,6 +8,7 @@ Version: 1.0
 */
 
 // Variables & Mixins
+@import "_colors.scss";
 @import "_variables.scss";
 @import "_mixins.scss";
 
@@ -28,5 +29,5 @@ Version: 1.0
 // Pages & Templates
 @import "_404.scss";
 
-// Utitility Classes
+// Utility Classes
 @import "_utilities.scss";

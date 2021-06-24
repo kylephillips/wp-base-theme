@@ -2,6 +2,7 @@
 // Styles necessary for correct display within the Gutenberg editor
 // --------------------------------------------------
 .edit-post-visual-editor.editor-styles-wrapper {
+	@import "_colors.scss";
 	@import "_variables.scss";
 	@import "_mixins.scss";
 	@import "_reset.scss";

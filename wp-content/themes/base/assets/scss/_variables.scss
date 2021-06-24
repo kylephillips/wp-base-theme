@@ -1,5 +1,6 @@
 //
 // Variables
+// Colors defined in colors.json, file output as _colors.scss
 // --------------------------------------------------
 
 // Fonts
@@ -16,14 +17,7 @@ $smaller: 0.8em;
 $large: 1.1em;
 $larger: 1.25em;
 
-// Colors
-$white: #ffffff;
-$black: #000000;
-$true-black: #000000;
-$background: #ffffff;
-$blue: #094e99;
-$red: #d9534f;
-$green: #5cb85c;
+$background: $white;
 $link-color: $blue;
 $hr: darken($white, 20%);
 $border: darken($white, 25%);
