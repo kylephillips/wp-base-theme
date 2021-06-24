@@ -12,8 +12,6 @@ class Dashboard
 		add_action('wp_dashboard_setup', [$this, 'cleanDashboard']);
 		add_action('wp_before_admin_bar_render', [$this, 'adminBar']);
 		add_action('init', [$this, 'cleanHead']);
-		add_filter('admin_footer_text', [$this, 'dashboardFooter']);
-		//add_action('admin_head', array($this, 'adminLogo'));
 		//add_action('admin_menu', array($this, 'removeMenus'));
 	}
 
@@ -66,59 +64,7 @@ class Dashboard
 	}
 
 	/**
-    * Dashboard Footer Text
-    */
-	public function dashboardFooter()
-	{
-		echo '<i class="icon-logo"></i> Built in <a href="http://wordpress.org" target="_blank">Wordpress</a>. Crafted by <a href="http://object9.com" target="_blank">Object 9</a>.';
-	}
-
-	/**
-	* Dashboard Logo
-	*/
-	public function adminLogo()
-	{
-		global $base_plugin_directory;
-		$path = $base_plugin_directory;
-		echo "
-		<style>
-			@font-face {
-			    font-family: 'icons';
-			    src: url('$path/assets/fonts/icomoon.eot');
-			    src: url('$path/assets/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-			         url('$path/assets/fonts/icomoon.woff') format('woff'),
-			         url('$path/assets/fonts/icomoon/icons.ttf') format('truetype'),
-			         url('$path/assets/fonts/icomoon.svg#myfontregular') format('svg');
-			    font-weight: normal;
-			    font-style: normal;
-
-			}
-			/*
-			#wpadminbar #wp-toolbar #wp-admin-bar-root-default #wp-admin-bar-wp-logo .ab-icon:before {
-				font-family: 'icons' !important;
-				content:'\\e601';
-			}*/
-			.icon-logo:before {
-				content: '\\e600';
-				font-family: 'icons' !important;
-				speak: none;
-				font-style: normal;
-				font-weight: normal;
-				font-variant: normal;
-				text-transform: none;
-				line-height: 1;
-				font-size:20px;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-				position:relative;
-				top:5px;
-			}
-		</style>
-	    ";
-	}
-
-	/**
-	* Remove Unneccessary Menu Items
+	* Remove Unnecessary Menu Items
 	*/
 	public function removeMenus()
 	{

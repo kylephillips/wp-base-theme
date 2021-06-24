@@ -48,7 +48,7 @@ var color_vars = async function(){
 }
 
 /**
-* Smush the front end Styles and output
+* Minify the front end Styles and output
 */
 var styles = function(){
 	return gulp.src(scss)
@@ -61,7 +61,7 @@ var styles = function(){
 }
 
 /**
-* Concatenate and uglify scripts
+* Concatenate and minify scripts
 */
 var scripts = function(){
 	return gulp.src(js_source)
