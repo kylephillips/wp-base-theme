@@ -20,11 +20,13 @@ wp-content/*
 wp-content/plugins/*
 !wp-content/plugins/base/
 wp-content/plugins/base/node_modules/*
+wp-content/plugins/base/package-lock.json
  
 # Ignore everything in the "themes" directory, except the themes you specify
 wp-content/themes/*
 !wp-content/themes/base/
 wp-content/themes/base/node_modules/*
+wp-content/themes/base/package-lock.json
 
 # Ignore the DB backups directory
 !db-backups/
