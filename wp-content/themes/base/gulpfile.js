@@ -6,7 +6,7 @@ var notify = require('gulp-notify');
 var minifycss = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var fs = require('fs')
+var fs = require('fs');
 
 // Style Paths
 var scss = ['assets/scss/*', '!assets/scss/_colors.scss'];
