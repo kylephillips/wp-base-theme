@@ -5,6 +5,8 @@
 !htaccess-sample.txt
 !wp-content/
 !config.json
+!composer.json
+!auth.sample.json
 
 !htaccess-sample.txt
  

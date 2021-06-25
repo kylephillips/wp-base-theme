@@ -1,0 +1,41 @@
+{
+    "name": "kylephillips/wp-base-theme",
+    "description": "A very basic WordPress theme optimized for customized development",
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*"
+            ]
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.9.7",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+                },
+                "require": {
+                  "philippbaschke/acf-pro-installer": "^1.0",
+                  "composer/installers": "^1.0"
+                }
+            }
+        },
+        {
+            "type":"composer",
+            "url":"https://composer.deliciousbrains.com"
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/wordpress-seo" : "*",
+        "wpackagist-plugin/wp-nested-pages" : "*",
+        "advanced-custom-fields/advanced-custom-fields-pro" : "*",
+        "deliciousbrains-plugin/wp-migrate-db-pro": "*",
+        "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "*",
+        "deliciousbrains-plugin/wp-migrate-db-pro-multisite-tools": "*"
+    }
+}
