@@ -24,5 +24,46 @@
             "color": "#5cb85c",
             "name": "Green"
         }
+    },
+    "editor_formats": {
+        "large-text": {
+            "block" : ["core/paragraph"],
+            "label" : "Large Text",
+            "tinymce" : {
+                "selector" : "p",
+                "wrapper" : false,
+                "inline" : false
+            }
+        },
+        "small-text": {
+            "block" : ["core/paragraph"],
+            "label" : "Small Text",
+            "tinymce" : {
+                "selector" : "p",
+                "wrapper" : false,
+                "inline" : false
+            }
+        },
+        "no-margin": {
+            "block" : ["core/paragraph", "core/heading"],
+            "label" : "No Margin",
+            "tinymce" : {
+                "selector" : "p,li,h1,h2,h3,h4,h5,h6",
+                "wrapper" : false,
+                "inline" : false
+            }
+        },
+        "large-spacer": {
+            "block" : ["core/spacer"],
+            "label" : "Large Spacer (5em)"
+        },
+        "medium-spacer": {
+            "block" : ["core/spacer"],
+            "label" : "Medium Spacer (2em)"
+        },
+        "small-spacer": {
+            "block" : ["core/spacer"],
+            "label" : "Small Spacer (1em)"
+        }
     }
 }

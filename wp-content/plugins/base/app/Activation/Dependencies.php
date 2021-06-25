@@ -21,7 +21,7 @@ class Dependencies
 	public function jquery()
 	{
 		wp_deregister_script('jquery');
-		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"), false);
+		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"), false);
 		wp_enqueue_script('jquery');
 	}
 
@@ -33,7 +33,7 @@ class Dependencies
 		wp_enqueue_script(
 			'scripts',
 			get_template_directory_uri() . '/assets/js/scripts.min.js',
-			array(),
+			[],
 			THEME_VERSION,
 			true
 		);
@@ -47,7 +47,7 @@ class Dependencies
 		wp_enqueue_style(
 			'theme-styles',
 			get_stylesheet_uri(),
-			array(),
+			[],
 			THEME_VERSION
 		);
 	}

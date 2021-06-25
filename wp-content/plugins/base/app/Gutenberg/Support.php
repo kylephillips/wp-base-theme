@@ -40,6 +40,18 @@ class Support
 			$base_plugin_directory . '/assets/js/gutenberg.js',
 			['wp-blocks']
 		);
+		wp_enqueue_script(
+			'theme-gutenberg-styles',
+			$base_plugin_directory . '/assets/js/gutenberg-css-classes.js',
+			['wp-blocks']
+		);
+		wp_localize_script(
+			'theme-gutenberg-styles',
+			'editor_formats',
+			[
+				'config_url' => get_bloginfo('url') . '/config.json'
+			]
+		);
 	}
 
 	/**

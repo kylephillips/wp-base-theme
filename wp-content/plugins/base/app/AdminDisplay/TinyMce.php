@@ -1,6 +1,8 @@
 <?php 
 namespace Base\AdminDisplay;
 
+use Base\Display\Config;
+
 /**
 * Edit TinyMCE/Add formats
 */
@@ -72,21 +74,19 @@ class TinyMce
 	*/
 	public function addFormats($init_array)
 	{
-		$style_formats = [ 
-			[
-				'title' => 'Drop Cap',  
-				'inline' => 'span',  
-				'classes' => 'dropcap',
-				'wrapper' => true,
-			],
-			[
-				'title' => 'Checklist',
-				'block' => 'ul',
-				'classes' => 'checklist',
-				'selector' => 'ul',
-				'wrapper' => false
-			]
-		]; 
+		$formats = (new Config)->editorFormats();
+		$style_formats = [];
+		foreach ( $formats as $key => $format ) :
+			if ( !isset($format['tinymce']) ) continue;
+			$tinymce = $format['tinymce'];
+			$new_format = [];
+			$new_format['title'] = $format['label'];
+			if ( isset($tinymce['inline']) && $tinymce['inline'] ) $new_format['inline'] = $tinymce['inline'];
+			if ( isset($tinymce['selector']) && $tinymce['selector'] ) $new_format['selector'] = $tinymce['selector'];
+			$new_format['wrapper'] = ( isset($tinymce['wrapper']) && $tinymce['wrapper'] ) ? true : false;
+			$new_format['classes'] = 'is-style-' . $key;
+			$style_formats[] = $new_format;
+		endforeach;
 		$init_array['style_formats'] = json_encode( $style_formats );
 		$init_array['wordpress_adv_hidden'] = false;
 		return $init_array;
