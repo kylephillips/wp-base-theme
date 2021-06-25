@@ -44,6 +44,7 @@ class Bootstrap
 	*/
 	public function pluginInit()
 	{
+		new Blocks\AcfBlocks;
 		new AdminDisplay\Login;
 		new AdminDisplay\Yoast;
 		new Display\Display;
