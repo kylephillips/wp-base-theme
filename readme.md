@@ -68,7 +68,7 @@ The theme uses a [gulp.js](https://gulpjs.com/) build process for styles and scr
 * `cd` into the theme directory
 * Run `npm install` to install node dependencies
 * Run `gulp` to start the build process
-* Update the `acf-json` directory with server-writeable permissions. Custom fields are synched through json files.
+* Update the `acf-json` directory with server-writeable permissions in order to sync ACF field groups.
 
 #### Styles
 Styles are compiled from scss files located in `assets/scss`. There are 2 primary source files: 
