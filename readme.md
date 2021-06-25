@@ -1,9 +1,20 @@
-# Base Theme for WordPress
+# Base Framework for Custom WordPress Sites
 
-This is a very basic theme/plugin combination for starting out a new build. Front-end styles and scripts use a Gulp build process with SCSS styles. This is not a theme framework or "all-in-one" theme builder – it is a set of templates and processes meant to cut down on project setup time.
+This is a basic theme/plugin framework for starting out a new custom theme build in WordPress. Front-end styles and scripts use a Gulp build process with SCSS styles. This is not an "all-in-one" theme builder – it is a set of templates and processes meant to cut down on project setup and development time.
+
+This framework includes:
+
+* A stripped-down theme structure and basic styles
+* An accompanying theme plugin for better organization of functionality normally placed in `functions.php`
+* A convenient method for defining colors and editor formats through a `config.json` file
+* A pre-defined front-end build process for rapid development
+* A file structure designed for modularity and developer-friendly conventions
 
 ## Requirements
-If running the accompanying plugin, PHP v5.3.2 or higher is required.
+
+* **PHP** v7.0 or higher.
+* **PHP Composer**
+* **Node.js**
 
 ## Theme Setup
 #### 1. Initial Setup
