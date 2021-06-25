@@ -22,7 +22,7 @@ class Bootstrap
 		$base_plugin_directory = plugins_url() . '/' . basename(dirname(dirname(__FILE__)));
 		global $color_scheme;
 		$color_scheme = __('Theme Colors');
-		$colors = (new Display\Colors)->getColors();
+		$colors = (new Display\Config)->getColors();
 		define('THEME_COLORS', $colors);
 	}
 
