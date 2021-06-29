@@ -69,6 +69,21 @@ p.has-drop-cap:not(:focus):first-letter {
 	margin: 0;
 }
 
+// Columns
+// Enables container element
+.wp-block-columns {
+	margin-bottom: 0;
+	padding: 0;
+	.wp-block-column {
+		max-width: $container-width;
+		margin: 0 auto;
+		padding: 0 1em;
+	}
+	&.has-background {
+		padding: 0;
+	}
+}
+
 
 @media (max-width: 767px)
 {

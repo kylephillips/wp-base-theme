@@ -21,3 +21,17 @@
 	@import "_alerts.scss";
 	@import "_wp-formats";
 }
+
+body.gutenberg-editor-page .editor-post-title__block, 
+body.gutenberg-editor-page .editor-default-block-appender, 
+body.gutenberg-editor-page .editor-block-list__block {
+	max-width: none;
+	margin: 0;
+}
+.block-editor-block-list__block {
+	margin: 0;
+}
+.block-editor__container .wp-block {
+	max-width: none;
+	margin: 0;
+}
