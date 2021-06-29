@@ -9,7 +9,7 @@ var uglify = require('gulp-uglify');
 var fs = require('fs');
 
 // Style Paths
-var scss = ['assets/scss/*', '!assets/scss/_colors.scss', '!_editor-formats-reference.scss'];
+var scss = ['assets/scss/*', '!assets/scss/_colors.scss', '!assets/scss/_editor-formats-reference.scss'];
 var config_json = JSON.parse(fs.readFileSync('../../../config.json'));
 var css = __dirname;
 
