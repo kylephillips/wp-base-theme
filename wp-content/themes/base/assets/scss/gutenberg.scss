@@ -1,7 +1,8 @@
 //
 // Styles necessary for correct display within the Gutenberg editor
 // --------------------------------------------------
-.edit-post-visual-editor.editor-styles-wrapper {
+.edit-post-visual-editor.editor-styles-wrapper, 
+.block-editor-writing-flow.block-editor-writing-flow {
 	@import "_colors.scss";
 	@import "_variables.scss";
 	@import "_mixins.scss";
