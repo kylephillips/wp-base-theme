@@ -1,0 +1,29 @@
+//
+// Spacers
+// --------------------------------------------------
+.wp-block-spacer {
+	&.is-style-extra-large-spacer {
+		height: 8em !important;
+		@media #{$mobile} {
+			height: 2em !important;
+		}
+	}
+	&.is-style-large-spacer {
+		height: 5em !important;
+		@media #{$mobile} {
+			height: 2em !important;
+		}
+	}
+	&.is-style-medium-spacer {
+		height: 2em !important;
+		@media #{$mobile} {
+			height: 1em !important;
+		}
+	}
+	&.is-style-small-spacer {
+		height: 1em !important;
+		@media #{$mobile} {
+			height: 1em !important;
+		}
+	}
+}
