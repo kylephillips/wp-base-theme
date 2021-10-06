@@ -3,6 +3,9 @@
 // --------------------------------------------------
 p {
 	margin: 0 0 2em 0;
+	&.is-style-no-margin {
+		margin: 0;
+	}
 }
 
 em {
@@ -41,6 +44,12 @@ h4 {
 	letter-spacing: .04em;
 	margin-bottom: .5em;
 	color: darken($white, 60%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	&.is-style-no-margin {
+		margin: 0;
+	}
 }
 
 hr {
