@@ -53,6 +53,10 @@
                 "inline" : false
             }
         },
+        "extra-large-spacer": {
+            "block" : ["core/spacer"],
+            "label" : "Extra Large Spacer (8em)"
+        },
         "large-spacer": {
             "block" : ["core/spacer"],
             "label" : "Large Spacer (5em)"
