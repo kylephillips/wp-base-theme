@@ -1,0 +1,51 @@
+//
+// TinyMCE Fixes (from our gutenberg global reset)
+// --------------------------------------------------
+.mce-container, .mce-container *, .mce-widget, .mce-widget *, .mce-reset {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+}
+.mce-ico {
+	font-family: 'tinymce', arial;
+}
+i.mce-i-aligncenter, i.mce-i-alignjustify, i.mce-i-alignleft, i.mce-i-alignright, i.mce-i-backcolor, i.mce-i-blockquote, i.mce-i-bold, i.mce-i-bullist, i.mce-i-charmap, i.mce-i-dashicon, i.mce-i-dfw, i.mce-i-forecolor, i.mce-i-fullscreen, i.mce-i-help, i.mce-i-hr, i.mce-i-indent, i.mce-i-italic, i.mce-i-link, i.mce-i-ltr, i.mce-i-numlist, i.mce-i-outdent, i.mce-i-pastetext, i.mce-i-pasteword, i.mce-i-redo, i.mce-i-remove, i.mce-i-removeformat, i.mce-i-spellchecker, i.mce-i-strikethrough, i.mce-i-underline, i.mce-i-undo, i.mce-i-unlink, i.mce-i-wp-media-library, i.mce-i-wp_adv, i.mce-i-wp_code, i.mce-i-wp_fullscreen, i.mce-i-wp_help, i.mce-i-wp_more, i.mce-i-wp_page {
+	font: normal 20px/1 'dashicons';
+}
+// ACF Fixes
+.acf-tab-wrap.-top ul li {
+	margin-bottom: 0;
+}
+.acf-checkbox-list {
+	margin-left: 0;
+	li {
+		padding-left: 0;
+		&:before {
+			display: none;
+		}
+	}
+	label {
+		margin: 0;
+	}
+	input[type="checkbox"]{
+		top: auto;
+		&:checked:before {
+			display: none;
+		}
+	}
+}
+.acf-true-false {
+	input[type="checkbox"]{
+		top: auto;
+		&:checked:before {
+			display: none;
+		}
+	}
+}
+.acf-tab-group {
+	li {
+		padding-left: 0;
+		&:before {
+			display: none;
+		}
+	}
+}
