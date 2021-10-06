@@ -67,7 +67,6 @@ class Support
 	*/
 	public function addColorChoices()
 	{
-		add_theme_support('disable-custom-colors');
 		add_theme_support('editor-color-palette', THEME_COLORS);
 	}
 }
