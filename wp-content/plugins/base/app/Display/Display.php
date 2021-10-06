@@ -14,6 +14,7 @@ class Display
 		add_filter('excerpt_more', [$this, 'excerptElipses']);
 		add_filter('upload_mimes', [$this, 'allowSvgUploads']);
 		add_action('admin_head', [$this, 'svgAdminDisplay']);
+		add_action('template_include', [$this, 'headerType']);
 	}
 
 	/**
@@ -56,5 +57,23 @@ class Display
 	public function svgAdminDisplay()
 	{
 		echo '<style type="text/css">td.media-icon img[src$=".svg"], .np-thumbnail img[src$=".svg"], #postimagediv img[src$=".svg"] { width: 100% !important; height: auto !important; }</style>';
+	}
+
+	/**
+	* Set the hero header type global
+	*/
+	public function headerType($template)
+	{
+		global $post;
+		if ( !$post ) return;
+		$has_hero = false;
+		if ( has_blocks($post->post_content) ) :
+			$blocks = parse_blocks( $post->post_content );
+			if ( $blocks && $blocks[0]['blockName'] == 'core/cover' ) $has_hero = true;
+			if ( $blocks && $blocks[0]['blockName'] == 'acf/hero' ) $has_hero = true;
+		endif;
+		if ( is_archive('albums') ) $has_hero = false;
+		define('HAS_HERO_BLOCK', $has_hero);
+		return $template;
 	}
 }
