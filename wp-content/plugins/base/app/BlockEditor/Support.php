@@ -1,5 +1,5 @@
 <?php
-namespace Base\Gutenberg;
+namespace Base\BlockEditor;
 
 /**
 * Adds Gutenberg Support
@@ -36,17 +36,17 @@ class Support
 	{
 		global $base_plugin_directory;
 		wp_enqueue_script(
-			'theme-gutenberg',
-			$base_plugin_directory . '/assets/js/gutenberg.js',
+			'theme-block-editor',
+			$base_plugin_directory . '/assets/js/block-editor.js',
 			['wp-blocks']
 		);
 		wp_enqueue_script(
-			'theme-gutenberg-styles',
-			$base_plugin_directory . '/assets/js/gutenberg-css-classes.js',
+			'theme-block-editor-styles',
+			$base_plugin_directory . '/assets/js/block-editor-css-classes.js',
 			['wp-blocks']
 		);
 		wp_localize_script(
-			'theme-gutenberg-styles',
+			'theme-block-editor-styles',
 			'editor_formats',
 			[
 				'config_url' => get_bloginfo('url') . '/config.json'

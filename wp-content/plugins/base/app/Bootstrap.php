@@ -34,7 +34,7 @@ class Bootstrap
 		new WPData\PostTypes;
 		new WPData\Taxonomies;
 		new AdminDisplay\TinyMce;
-		new Gutenberg\Support;
+		new BlockEditor\Support;
 		new Display\Emojis;
 		new Activation\Typekit(null); // Add Kit ID to enable typekit in the visual editor/TinyMCE
 	}
@@ -52,6 +52,6 @@ class Bootstrap
 		new Activation\Dependencies;
 		new AdminDisplay\AcfEditorStyles;
 		new User\ProfileSettings;
-		new Gutenberg\InlineFormats;
+		new BlockEditor\InlineFormats;
 	}
 }

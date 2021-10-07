@@ -1,5 +1,5 @@
 <?php
-namespace Base\Gutenberg;
+namespace Base\BlockEditor;
 
 /**
 * Adds custom inline formats to the block editor
