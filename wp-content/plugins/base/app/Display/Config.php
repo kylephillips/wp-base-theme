@@ -22,7 +22,11 @@ class Config
 	*/
 	public function getColors()
 	{
-		return $this->getConfigArray('colors');
+		$colors = $this->getConfigArray('colors');
+		foreach ( $colors as $key => $color ){
+			$colors[$key]['slug'] = $key;
+		}
+		return $colors;
 	}
 
 	public function getColorFromSlug($slug)
