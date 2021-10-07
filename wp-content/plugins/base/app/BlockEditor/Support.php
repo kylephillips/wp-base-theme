@@ -16,13 +16,13 @@ class Support
 	}
 
 	/**
-	* Add the editor styles for Gutenberg
+	* Add the editor styles
 	*/
 	public function editorStyles()
 	{
 		 wp_enqueue_style(
 		 	'gutenstyles', 
-		 	get_theme_file_uri( '/gutenberg.css' ), 
+		 	get_theme_file_uri( '/block-editor.css' ), 
 		 	[], 
 		 	THEME_VERSION, 
 		 	'all'
@@ -30,7 +30,7 @@ class Support
 	}
 
 	/**
-	* Add the editor scripts for customizing Gutenberg
+	* Add the editor scripts for customizing the block editor
 	*/
 	public function editorScripts()
 	{
@@ -55,7 +55,7 @@ class Support
 	}
 
 	/**
-	* Remove the front-end styles injected by Gutenberg. We'll handle these in our theme styles
+	* Remove the front-end styles injected by the block editor. We'll handle these in our theme styles
 	*/
 	public function removeFrontEndStyles()
 	{

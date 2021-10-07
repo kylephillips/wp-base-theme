@@ -15,7 +15,7 @@
 	line-height: $base-line-height;
 	color: $black;
 
-	@import "_gutenberg-blocks.scss";
+	@import "_block-editor-blocks.scss";
 	@import "_typography.scss";
 	@import "_buttons.scss";
 	@import "_alerts.scss";
