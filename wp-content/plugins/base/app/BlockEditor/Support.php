@@ -21,7 +21,7 @@ class Support
 	public function editorStyles()
 	{
 		 wp_enqueue_style(
-		 	'gutenstyles', 
+		 	'block-editor-styles', 
 		 	get_theme_file_uri( '/block-editor.css' ), 
 		 	[], 
 		 	THEME_VERSION, 
