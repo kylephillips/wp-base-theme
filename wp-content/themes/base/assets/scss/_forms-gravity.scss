@@ -51,6 +51,12 @@ ul.gfield_radio {
 	}
 }
 
+.ginput_container_select {
+	background: url('data:image/svg+xml; utf8, <svg version="1.1" width="10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 30" style="enable-background:new 0 0 20 30;" xml:space="preserve"><polygon points="19.98,20 9.98,30 -0.02,20 "/><polygon points="-0.02,10 9.98,0 19.98,10 "/></svg>'), $light-gray;
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+}
+
 .validation_message {
 	color: $red;
 	font-size: $small;
