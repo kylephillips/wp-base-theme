@@ -90,3 +90,10 @@ input[type="radio"] {
 		content: "";
 	}
 } // Radio
+
+input[type="submit"],
+button[type="submit"] {
+	@include appearance;
+	border: 0;
+	@extend .btn;
+}
