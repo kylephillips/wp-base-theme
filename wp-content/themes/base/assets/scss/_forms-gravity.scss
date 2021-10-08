@@ -5,27 +5,29 @@
 	display: none;
 }
 
-ul.gform_fields {
-	@include unstyled;
-	@include clearfix;
+.gform_fields {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
-li.gfield {
-	float: left;
-	width: 48%;
-	clear: both;
-	&.right {
-		float: right;
-		clear: none;
+.gfield {
+	margin-bottom: 1.5rem;
+	&.gfield--width-half {
+		width: 48%;
 	}
-	&.full {
-		float: none;
+	&.gfield--width-full {
 		width: 100%;
 	}
 }
 
 .gfield_required {
 	color: $red;
+}
+
+.gfield_label {
+	display: block;
+	font-size: .95rem;
 }
 
 ul.gfield_checkbox,
