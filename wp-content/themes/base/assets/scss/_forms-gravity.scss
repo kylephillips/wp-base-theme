@@ -5,6 +5,15 @@
 	display: none;
 }
 
+.gform_submission_error {
+	font-size: .9rem;
+}
+
+.gform_validation_errors {
+	color: $red;
+	margin-bottom: 1.5rem;
+}
+
 .gform_fields {
 	display: flex;
 	flex-wrap: wrap;
