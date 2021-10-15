@@ -13,6 +13,7 @@ class Dependencies
 		add_action( 'wp_head', [$this, 'headScripts']);
 		add_action( 'wp_footer', [$this, 'footerScripts']);
 		add_action( 'wp_body_opening', [$this, 'bodyScripts']);
+		add_action( 'after_setup_theme', [$this, 'htmlVersion']);
 	}
 
 	/**
@@ -23,6 +24,15 @@ class Dependencies
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"), false);
 		wp_enqueue_script('jquery');
+	}
+	
+	/**
+	* Add HTML 5 support
+	* Removes script type="text/javascript"
+	*/
+	public function htmlVersion()
+	{
+		 add_theme_support( 'html5', [ 'script', 'style' ] );
 	}
 
 	/**
