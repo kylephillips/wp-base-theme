@@ -69,5 +69,21 @@
             "block" : ["core/spacer"],
             "label" : "Small Spacer (1em)"
         }
+    },
+    "image_sizes": {
+        "square": {
+            "label" : "Square",
+            "width" : 1000,
+            "height" : 1000,
+            "crop" : true,
+            "block_editor": true
+        },
+        "rectangle": {
+            "label" : "Rectangle",
+            "width" : 1000,
+            "height" : 600,
+            "crop" : true,
+            "block_editor": true
+        }
     }
 }

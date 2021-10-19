@@ -48,6 +48,7 @@ class Bootstrap
 		new AdminDisplay\Login;
 		new AdminDisplay\Yoast;
 		new Display\Display;
+		new Display\ImageSizes;
 		new AdminDisplay\Dashboard;
 		new Activation\Dependencies;
 		new AdminDisplay\AdvancedCustomFields;

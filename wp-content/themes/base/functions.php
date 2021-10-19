@@ -2,6 +2,9 @@
 /**
 * Theme Functions
 * See theme plugin for additional functionality
+*
+* Image sizes defined in site config.json, output in Display\ImageSizes
+* Theme colors defined in site config.json
 */
 define('THEME_VERSION', '1.0');
 
@@ -9,12 +12,6 @@ define('THEME_VERSION', '1.0');
 * Adds Editor Styles
 */
 add_editor_style('editor-styles.css');
-
-/**
-* Registers Image Sizes
-*/
-add_theme_support( 'post-thumbnails' );
-//add_image_size( 'image-size', 100, 100, true );
 
 /**
 * Registers Nav Menus

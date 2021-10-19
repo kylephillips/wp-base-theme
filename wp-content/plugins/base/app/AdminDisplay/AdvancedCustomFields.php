@@ -1,8 +1,6 @@
 <?php
 namespace Base\AdminDisplay;
 
-use Base\Display\Colors;
-
 class AdvancedCustomFields
 {
 	public function __construct()
@@ -34,7 +32,7 @@ class AdvancedCustomFields
 			'theme-acf-scripts',
 			$base_plugin_directory . '/assets/js/acf-color-palette.js'
 		);
-		$colors = (new Colors)->getColors();
+		$colors = THEME_COLORS;
 		$localized_data = [
 			'colors' => $colors
 		];
