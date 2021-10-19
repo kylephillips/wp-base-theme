@@ -50,7 +50,7 @@ class Bootstrap
 		new Display\Display;
 		new AdminDisplay\Dashboard;
 		new Activation\Dependencies;
-		new AdminDisplay\AcfEditorStyles;
+		new AdminDisplay\AdvancedCustomFields;
 		new User\ProfileSettings;
 		new BlockEditor\InlineFormats;
 	}
