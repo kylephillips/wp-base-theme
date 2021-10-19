@@ -46,6 +46,7 @@ Theme.Factory = function()
 	*/
 	self.initializeLibraries = function()
 	{
+		new Theme.ScrollTo;
 		$('body').fitVids();
 	}
 
