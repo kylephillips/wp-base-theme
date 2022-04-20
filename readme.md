@@ -6,13 +6,13 @@ This framework includes:
 
 * A stripped-down theme structure and basic styles
 * An accompanying theme plugin for better organization of functionality normally placed in `functions.php`
-* A convenient method for defining colors and editor formats through a `config.json` file
+* A convenient method for defining editor formats and image sizes through a `config.json` file
 * A pre-defined front-end build process for rapid development
 * A file structure designed for modularity and developer-friendly conventions
 
 ## Requirements
 
-* **PHP** v7.0 or higher.
+* **PHP** v7.0 or higher (works in PHP v8).
 * **PHP Composer**
 * **Node.js**
 
@@ -83,7 +83,7 @@ Styles are compiled from scss files located in `assets/scss`. There are 2 primar
   * Includes most styles from the public theme, as well as tinymce and gutenberg fixes/tweaks.
 
 #### Colors
-Theme colors are defined in `config.json`. This file is read to output a `_colors.scss` file automatically that contains the color variables and css classes specifically for the WordPress editor.
+Theme colors are defined in a standard `theme.json`. This file is read to output a `_colors.scss` file automatically that contains the color variables and css classes specifically for the WordPress editor.
 
 In addition, these colors define the color choices available in the WordPress editor. These are available as a array constant named `THEME_COLORS`.
 
