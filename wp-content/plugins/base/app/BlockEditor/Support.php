@@ -47,7 +47,7 @@ class Support
 			'theme-block-editor-styles',
 			'editor_formats',
 			[
-				'config_url' => get_bloginfo('url') . '/config.json'
+				'config_url' => get_template_directory_uri() . '/config.json'
 			]
 		);
 	}

@@ -19,7 +19,7 @@ class Config
 	public function getConfigArray($key)
 	{
 		$array = [];
-		$file_path = rtrim(ABSPATH, '/') . '/config.json';
+		$file_path = get_template_directory() . '/config.json';
 		$file = json_decode(file_get_contents($file_path), true);
 		if ( isset($file[$key]) ) {
 			$array = (array) $file[$key];
