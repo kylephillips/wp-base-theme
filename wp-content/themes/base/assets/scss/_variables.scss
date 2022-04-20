@@ -17,6 +17,9 @@ $smaller: 0.8em;
 $large: 1.1em;
 $larger: 1.25em;
 
+$white: $true-white;
+$black: $true-black;
+$light-gray: darken($white, 6%);
 $background: $white;
 $link-color: $blue;
 $hr: darken($white, 20%);

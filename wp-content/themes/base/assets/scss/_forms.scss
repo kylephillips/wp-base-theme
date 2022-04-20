@@ -47,7 +47,7 @@ input[type="checkbox"]{
 	position: relative;
 	outline: none;
 	top: 4px;
-	box-shadow: inset 1px 1px 1px 0px rgba($true-black, .15);
+	box-shadow: inset 1px 1px 1px 0px rgba($black, .15);
 	&:checked {
 		box-shadow: none;
 	}
@@ -77,7 +77,7 @@ input[type="radio"] {
 	position: relative;
 	top: 4px;
 	outline: none;
-	box-shadow: inset 1px 1px 1px 0px rgba($true-black, .15);
+	box-shadow: inset 1px 1px 1px 0px rgba($black, .15);
 	&:checked:after {
 		position: absolute;
 		display: block;

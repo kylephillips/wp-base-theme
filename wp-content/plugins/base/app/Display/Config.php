@@ -6,6 +6,16 @@ namespace Base\Display;
 */
 class Config
 {
+	public function getThemeJsonArray($key)
+	{
+		$file_path = get_template_directory() . '/theme.json';
+		$file = json_decode(file_get_contents($file_path), true);
+		if ( $key == 'colors' && isset($file['settings']['color']['palette'])) {
+			return $file['settings']['color']['palette'];
+		}
+		return [];
+	}
+
 	public function getConfigArray($key)
 	{
 		$array = [];
@@ -22,19 +32,7 @@ class Config
 	*/
 	public function getColors()
 	{
-		$colors = $this->getConfigArray('colors');
-		foreach ( $colors as $key => $color ){
-			$colors[$key]['slug'] = $key;
-		}
-		return $colors;
-	}
-
-	public function getColorFromSlug($slug)
-	{
-		$colors = $this->getColors();
-		foreach ( $colors as $color ){
-			if ( $color['slug'] == $slug ) return $color['color'];
-		}
+		return $this->getThemeJsonArray('colors');
 	}
 
 	/**

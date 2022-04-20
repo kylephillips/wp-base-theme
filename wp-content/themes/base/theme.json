@@ -1,0 +1,35 @@
+{
+    "version": 1,
+	"settings": {
+		"color": {
+			"defaultPalette": false,
+			"palette": [
+				{
+					"slug": "true-black",
+					"color": "#000000",
+					"name": "True Black"
+				},
+				{
+					"slug": "true-white",
+					"color": "#FFFFFF",
+					"name": "True White"
+				},
+				{
+					"slug": "blue",
+            		"color": "#094e99",
+            		"name": "Blue"
+            	},
+            	{
+            		"slug": "red",
+            		"color": "#d9534f",
+            		"name": "Red"
+            	},
+            	{
+            		"slug": "green",
+            		"color": "#5cb85c",
+            		"name": "Green"
+            	}
+			]
+		}
+	}
+}
