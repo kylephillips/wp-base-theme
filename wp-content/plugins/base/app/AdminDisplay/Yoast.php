@@ -9,7 +9,7 @@ class Yoast
 	public function __construct()
 	{
 		add_filter('wpseo_metabox_prio', [$this, 'yoastToBottom']);
-		add_filter ('manage_edit-page_columns', [$this, 'yoastColumns']);
+		add_filter('manage_edit-page_columns', [$this, 'yoastColumns']);
 		add_action('init', [$this, 'removeYoastNotifications']);
 	}
 
