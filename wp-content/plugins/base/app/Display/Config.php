@@ -20,6 +20,7 @@ class Config
 	{
 		$array = [];
 		$file_path = get_template_directory() . '/config.json';
+		if ( !file_exists($file_path) ) return $array;
 		$file = json_decode(file_get_contents($file_path), true);
 		if ( isset($file[$key]) ) {
 			$array = (array) $file[$key];
