@@ -54,10 +54,12 @@ class Dependencies
 	*/
 	public function styles()
 	{
+		$deps = [];
+		if ( THEME_GOOGLE_FONTS ) $deps[] = 'theme-google-fonts';
 		wp_enqueue_style(
 			'theme-styles',
 			get_stylesheet_uri(),
-			[],
+			$deps,
 			THEME_VERSION
 		);
 	}
@@ -67,10 +69,13 @@ class Dependencies
 	*/
 	public function adminStyles()
 	{
-		global $base_plugin_directory;
+		$deps = [];
+		if ( THEME_GOOGLE_FONTS ) $deps[] = 'theme-google-fonts';
+		global $blastec_plugin_directory;
 		wp_enqueue_style(
 			'custom-admin',
-			$base_plugin_directory . '/assets/css/admin_style.css'
+			$blastec_plugin_directory . '/assets/css/admin_style.css',
+			$deps
 		);
 	}
 

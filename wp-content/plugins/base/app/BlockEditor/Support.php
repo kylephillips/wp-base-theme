@@ -18,10 +18,12 @@ class Support
 	*/
 	public function editorStyles()
 	{
+		$deps = [];
+		if ( THEME_GOOGLE_FONTS ) $deps[] = 'theme-google-fonts';
 		 wp_enqueue_style(
 		 	'block-editor-styles', 
 		 	get_theme_file_uri( '/block-editor.css' ), 
-		 	[], 
+		 	$deps, 
 		 	THEME_VERSION, 
 		 	'all'
 		 );
