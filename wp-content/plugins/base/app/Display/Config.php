@@ -9,6 +9,7 @@ class Config
 	public function getThemeJsonArray($key)
 	{
 		$file_path = get_template_directory() . '/theme.json';
+		if ( !file_exists($file_path) ) return [];
 		$file = json_decode(file_get_contents($file_path), true);
 		if ( $key == 'colors' && isset($file['settings']['color']['palette'])) {
 			return $file['settings']['color']['palette'];
