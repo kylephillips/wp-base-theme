@@ -1,5 +1,13 @@
 {
     "editor_formats": {
+        "container": {
+            "block" : ["core/columns"],
+            "label" : "Container"
+        },
+        "container-small": {
+            "block" : ["core/columns"],
+            "label" : "Container - Small"
+        },
         "large-text": {
             "block" : ["core/paragraph"],
             "label" : "Large Text",

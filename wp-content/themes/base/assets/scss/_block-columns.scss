@@ -1,0 +1,15 @@
+//
+// Core Columns Blocks
+// --------------------------------------------------
+.wp-block-columns {
+	margin-bottom: 0;
+	padding: 0;
+	&.is-style-container {
+		max-width: $container-width;
+		margin: 0 auto;
+	}
+	&.is-style-container-small {
+		max-width: $container-width-small;
+		margin: 0 auto;
+	}
+}
