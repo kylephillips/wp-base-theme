@@ -12,7 +12,7 @@ class Dashboard
 		add_action('wp_dashboard_setup', [$this, 'cleanDashboard']);
 		add_action('wp_before_admin_bar_render', [$this, 'adminBar']);
 		add_action('init', [$this, 'cleanHead']);
-		//add_action('admin_menu', array($this, 'removeMenus'));
+		add_action('admin_menu', [$this, 'removeMenus']);
 	}
 
 	/**
