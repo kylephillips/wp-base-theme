@@ -7,7 +7,6 @@ class AdvancedCustomFields
 	{
 		add_action('admin_enqueue_scripts', [$this, 'addStyles']);
 		add_action('acf/input/admin_enqueue_scripts', [$this, 'addScripts']);
-		add_action('acf/load_field/name=background_color', [$this, 'ColorChoices']);
 	}
 
 	/**
@@ -41,16 +40,5 @@ class AdvancedCustomFields
 			'theme_acf', 
 			$localized_data
 		);
-	}
-
-	public function ColorChoices($field)
-	{
-		$colors = ( new Colors )->getColors();
-		$choices = [];
-		foreach ( $colors as $color ){
-			$choices[$color['slug']] = $color['name'];
-		}
-		$field['choices'] = $choices;
-		return $field;
 	}
 }
