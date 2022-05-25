@@ -1,6 +1,12 @@
 {
-    "version": 1,
+    "version": 2,
+    "styles": {
+		"spacing": {
+			"blockGap": "3rem"
+		}
+	},
 	"settings": {
+		"appearanceTools": true,
 		"color": {
 			"defaultPalette": false,
 			"palette": [
@@ -30,6 +36,6 @@
             		"name": "Green"
             	}
 			]
-		}
+		} // color
 	}
 }
