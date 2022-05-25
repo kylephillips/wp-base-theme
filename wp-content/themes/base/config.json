@@ -8,24 +8,6 @@
             "block" : ["core/columns"],
             "label" : "Container - Small"
         },
-        "large-text": {
-            "block" : ["core/paragraph"],
-            "label" : "Large Text",
-            "tinymce" : {
-                "selector" : "p",
-                "wrapper" : false,
-                "inline" : false
-            }
-        },
-        "small-text": {
-            "block" : ["core/paragraph"],
-            "label" : "Small Text",
-            "tinymce" : {
-                "selector" : "p",
-                "wrapper" : false,
-                "inline" : false
-            }
-        },
         "no-margin": {
             "block" : ["core/paragraph", "core/heading"],
             "label" : "No Margin",

@@ -35,7 +35,32 @@ body.gutenberg-editor-page .editor-block-list__block {
 .block-editor-block-list__block {
 	margin: 0;
 }
+.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper > * + *, .editor-styles-wrapper .block-editor-block-list__layout.is-root-container > * + * {
+	margin-block-start: 0 !important;
+}
 .block-editor__container .wp-block {
 	max-width: none;
 	margin: 0;
+}
+// ACF Form fixes for block editor
+.edit-post-visual-editor.editor-styles-wrapper .acf-field, 
+.block-editor-writing-flow.block-editor-writing-flow .acf-field {
+	font-size: 14px;
+	.button.button-primary {
+		color: $white;
+		padding: 0 10px;
+	}
+	.button {
+		padding: 0 10px;
+		line-height: 2;
+	}
+	input[type="checkbox"]:checked:after{
+		content: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%233582c4%27%2F%3E%3C%2Fsvg%3E);
+	}
+	.acf-label {
+		font-family: $bold-font-family;
+	}
+	.acf-row {
+		border: 1px solid #ccd0d4;
+	}
 }

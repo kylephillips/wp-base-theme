@@ -2,6 +2,7 @@
 // Spacers
 // --------------------------------------------------
 .wp-block-spacer {
+	margin-block-start: 0 !important;
 	&.is-style-extra-large-spacer {
 		height: 8em !important;
 		@media #{$mobile} {
