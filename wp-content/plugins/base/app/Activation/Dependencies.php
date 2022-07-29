@@ -71,10 +71,9 @@ class Dependencies
 	{
 		$deps = [];
 		if ( THEME_GOOGLE_FONTS ) $deps[] = 'theme-google-fonts';
-		global $blastec_plugin_directory;
 		wp_enqueue_style(
 			'custom-admin',
-			$blastec_plugin_directory . '/assets/css/admin_style.css',
+			THEME_PLUGIN_DIRECTORY . '/assets/css/admin_style.css',
 			$deps
 		);
 	}
@@ -83,12 +82,10 @@ class Dependencies
 	* Custom Admin Color Scheme
 	*/
 	public function colorScheme()
-	{
-		global $color_scheme;
-		global $base_plugin_directory;
+	{	
 		wp_admin_css_color(
-		    'custom-scheme', $color_scheme,
-		   	$base_plugin_directory . '/assets/css/colors.css',
+		    'custom-scheme', THEME_COLOR_SCHEME,
+		   	THEME_PLUGIN_DIRECTORY . '/assets/css/colors.css',
 		    [ '#000000', '#e72234', '#ebecec', '#456a7f' ]
 		);
 	}

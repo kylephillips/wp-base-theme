@@ -18,10 +18,9 @@ class Bootstrap
 	*/
 	public function defineGlobals()
 	{
-		global $base_plugin_directory;
-		$base_plugin_directory = plugins_url() . '/' . basename(dirname(dirname(__FILE__)));
-		global $color_scheme;
-		$color_scheme = __('Theme Colors');
+		$plugin_directory = plugins_url() . '/' . basename(dirname(dirname(__FILE__)));
+		define('THEME_PLUGIN_DIRECTORY', $plugin_directory);
+		define('THEME_COLOR_SCHEME', __('Theme Colors'));
 		$colors = (new Display\Config)->getColors();
 		define('THEME_COLORS', $colors);
 	}

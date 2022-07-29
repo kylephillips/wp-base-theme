@@ -13,10 +13,9 @@ class Login
 	*/
 	public function styleLogin()
 	{
-        global $base_plugin_directory;
         wp_enqueue_style(
             'custom-login',
-            $base_plugin_directory . '/assets/css/login.css',
+            THEME_PLUGIN_DIRECTORY . '/assets/css/login.css',
             false
         );
 	}

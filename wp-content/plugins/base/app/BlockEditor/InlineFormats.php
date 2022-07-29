@@ -14,10 +14,9 @@ class InlineFormats
 
 	public function registerScripts()
 	{
-		global $base_plugin_directory;
 	    wp_register_script(
 	        'block-editor-inline-formats',
-	        $base_plugin_directory . '/assets/js/block-editor-inline-formats.js',
+	        THEME_PLUGIN_DIRECTORY . '/assets/js/block-editor-inline-formats.js',
 	        ['wp-rich-text', 'wp-element', 'wp-editor']
 	    );
 	}

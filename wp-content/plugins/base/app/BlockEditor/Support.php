@@ -34,15 +34,14 @@ class Support
 	*/
 	public function editorScripts()
 	{
-		global $base_plugin_directory;
 		wp_enqueue_script(
 			'theme-block-editor',
-			$base_plugin_directory . '/assets/js/block-editor.js',
+			THEME_PLUGIN_DIRECTORY . '/assets/js/block-editor.js',
 			['wp-blocks']
 		);
 		wp_enqueue_script(
 			'theme-block-editor-styles',
-			$base_plugin_directory . '/assets/js/block-editor-css-classes.js',
+			THEME_PLUGIN_DIRECTORY . '/assets/js/block-editor-css-classes.js',
 			['wp-blocks']
 		);
 		wp_localize_script(

@@ -25,8 +25,7 @@ class Typekit
 	*/
 	public function addTypekit($plugins)
 	{
-		global $base_plugin_directory;
-		$plugins['typekit'] = $base_plugin_directory . '/assets/js/typekit.js';
+		$plugins['typekit'] = THEME_PLUGIN_DIRECTORY . '/assets/js/typekit.js';
 		return $plugins;
 	}
 

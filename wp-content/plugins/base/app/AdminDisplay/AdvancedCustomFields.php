@@ -14,10 +14,9 @@ class AdvancedCustomFields
 	*/
 	public function addStyles()
 	{
-		global $base_plugin_directory;
 		wp_enqueue_script(
 			'acf-wysiwyg-styles',
-			$base_plugin_directory . '/assets/js/acf-wysiwyg-editor.js'
+			THEME_PLUGIN_DIRECTORY . '/assets/js/acf-wysiwyg-editor.js'
 		);
 	}
 
@@ -26,10 +25,9 @@ class AdvancedCustomFields
 	*/
 	public function addScripts()
 	{
-		global $base_plugin_directory;
 		wp_enqueue_script(
 			'theme-acf-scripts',
-			$base_plugin_directory . '/assets/js/acf-color-palette.js'
+			THEME_PLUGIN_DIRECTORY . '/assets/js/acf-color-palette.js'
 		);
 		$colors = THEME_COLORS;
 		$localized_data = [
