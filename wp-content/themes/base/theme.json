@@ -36,6 +36,43 @@
             		"name": "Green"
             	}
 			]
+		},
+		"typography": {
+			"dropCap": false,
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Oswald\", serif",
+					"name": "Oswald",
+					"slug": "oswald",
+					"fontFace": [
+						{
+							"fontFamily": "Oswald",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "//fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" ]
+						}
+					]
+				}
+			],
+			"fontSizes": [
+				{
+					"size": ".85em",
+					"slug": "small"
+				},
+				{
+					"size": "1.125em",
+					"slug": "medium"
+				},
+				{
+					"size": "clamp(1.75em, 2em, 2vw)",
+					"slug": "large"
+				},
+				{
+					"size": "clamp(1.75em, 2.5em, 2.5vw)",
+					"slug": "x-large"
+				}
+			]
 		}
 	}
 }

@@ -61,6 +61,11 @@ img {
 	}
 }
 
+// Fixes margin issue in blocks
+div[class^="wp-container"]  > * + * {
+	margin-block-start: 0;
+}
+
 // Selection Colors
 ::selection {
 	background: $black;
