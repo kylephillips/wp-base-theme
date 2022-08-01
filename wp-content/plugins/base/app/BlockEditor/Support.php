@@ -20,6 +20,7 @@ class Support
 	{
 		$deps = [];
 		if ( THEME_GOOGLE_FONTS ) $deps[] = 'theme-google-fonts';
+		if ( THEME_CLOUD_TYPOGRAPHY ) $deps[] = 'theme-cloud-typography';
 		 wp_enqueue_style(
 		 	'block-editor-styles', 
 		 	get_theme_file_uri( '/block-editor.css' ), 
