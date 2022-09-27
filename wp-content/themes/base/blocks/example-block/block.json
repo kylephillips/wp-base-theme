@@ -1,0 +1,45 @@
+{
+    "name": "base/base-example-block",
+    "title": "Example Block - Base Theme",
+    "description": "Boilerplate ACF Block Type",
+    "category": "base",
+    "icon": "menu-alt",
+    "apiVersion": 2,
+    "keywords": [
+        "base",
+        "example"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "example-block.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": false,
+        "color": {
+            "text": true,
+            "background": true,
+            "link": true
+        },
+        "alignText": true,
+        "spacing": {
+            "margin": [
+                "top",
+                "bottom"
+            ],
+            "padding": true
+        },
+        "typography": {
+            "lineHeight": true,
+            "fontSize": true
+        },
+        "fullHeight": true
+    },
+    "attributes": {
+        "backgroundColor": {
+            "type": "string",
+            "default": "white"
+        }
+    }
+}

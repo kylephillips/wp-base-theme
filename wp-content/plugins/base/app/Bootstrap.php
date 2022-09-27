@@ -45,7 +45,7 @@ class Bootstrap
 	{
 		new Activation\GoogleFonts('//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&display=swap'); // Set to null if not using Google Fonts
 		new Activation\CloudTypography('//cloud.typography.com/624572/7671632/css/fonts.css'); // Set to null if not using cloud typography (typography.com)
-		new Blocks\AcfBlocks;
+		new Blocks\RegisterBlocks;
 		new AdminDisplay\Login;
 		new AdminDisplay\Yoast;
 		new Display\Display;
