@@ -115,6 +115,16 @@ Scripts are setup modularily, with a separate class/file for each component. If 
   * The filename should be added to the `js_source` array
 * Stop gulp if running and restart the build process
 
+#### Blocks
+Custom block registration assumes Advanced Custom Fields version 6 or above is installed. Blocks are registered by adding a directory to the `/blocks` theme directory. Two files are required inside each directory:
+
+* **`block.json`** - The file that registers our block. This follows the ACF V6 convention of using core WordPress functionality. [Read more here](https://www.advancedcustomfields.com/resources/whats-new-with-acf-blocks-in-acf-6/).
+* **`block-template.php`** - The filename should match the `renderTemplate` value in `block.json`. This is the template file for the block.
+
+Outside of these two files, additional asset files may be created/required as needed, depending on the block. 
+
+Behind the scenes, the `RegisterBlocks` class in the theme plugin loops through all the child directories of `theme/blocks`. There is no need to call `register_block_type` in functions.php or anywhere else in the theme.
+
 
 ## Plugin Setup
 
@@ -136,7 +146,6 @@ The theme plugin makes use of [composer](https://getcomposer.org/) for namespaci
 * The primary namespace is `Base`
 * Sub namespaces should be organized into directories by responsibility
 * Some key namespaces are:
-  * Blocks - Registers all of our custom blocks
   * Activation - Enqueues assets and handles redirects
   * Gutenberg - Enables Gutenberg support and adds custom colors to the color picker
   * Display - Applies filters and functions related to the front-end display of the website
