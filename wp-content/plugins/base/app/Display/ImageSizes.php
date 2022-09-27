@@ -17,6 +17,7 @@ class ImageSizes
 	public function registerSizes()
 	{
 		$sizes = (new Config)->getConfigArray('image_sizes');
+		if ( empty($sizes) ) return;
 		if ( !$sizes || empty($sizes) ) return;
 		foreach ( $sizes as $key => $size ) :
 			add_image_size( $key, $size['width'], $size['height'], $size['crop'] );
@@ -27,7 +28,7 @@ class ImageSizes
 	{
 		$custom_sizes = [];
 		$size_array = (new Config)->getConfigArray('image_sizes');
-		if ( !$size_array || empty($size_array) ) return;
+		if ( !$size_array || empty($size_array) ) return $sizes;
 		foreach ( $size_array as $key => $size ) :
 			if ( !$size['block_editor'] ) continue;
 			$custom_sizes[$key] = $size['label'];

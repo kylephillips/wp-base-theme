@@ -15,6 +15,7 @@ class RegisterBlocks
 	public function registerBlocks()
 	{
 		$directory = get_template_directory() . '/blocks';
+		if ( !is_dir($directory) ) return;
 		$files = new \DirectoryIterator($directory);
 		foreach ( $files as $file ){
 			if ( $file->isDot() ) continue;
