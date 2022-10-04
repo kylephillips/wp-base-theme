@@ -17,7 +17,8 @@ class Typekit
 		if ( !$kit_id ) return;
 		add_filter('mce_external_plugins', [$this, 'addTypekit']);
 		add_action('admin_head', [$this, 'adminHeadGlobals']);
-		add_action('wp_enqueue_scripts', [$this, 'publicStyles']);
+		add_action('wp_enqueue_scripts', [$this, 'styles']);
+		add_action('admin_enqueue_scripts', [$this, 'styles']);
 	}
 
 	/**
@@ -41,10 +42,10 @@ class Typekit
 	/**
 	* Enqueue the Front End Style
 	*/
-	public function publicStyles()
+	public function styles()
 	{
 		wp_enqueue_style(
-			'typekit',
+			'theme-typekit',
 			'https://use.typekit.net/' . $this->kit_id . '.css',
 			[],
 			'',
