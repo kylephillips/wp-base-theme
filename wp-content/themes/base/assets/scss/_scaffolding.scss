@@ -62,7 +62,7 @@ img {
 }
 
 // Fixes margin issue in blocks
-div[class^="wp-container"]  > * + * {
+div[class^="wp-container"]  > div + * {
 	margin-block-start: 0;
 }
 
