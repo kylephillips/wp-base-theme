@@ -62,8 +62,18 @@ img {
 }
 
 // Fixes margin issue in blocks
-div[class^="wp-container"]  > div + * {
+div[class^="wp-container"] > div + * {
 	margin-block-start: 0;
+}
+div[class^="wp-container"]  > * + p {
+	margin-block-end: 1rem;
+	margin-block-start: 0;
+	&.is-style-no-margin {
+		margin-block-end: 0;
+	}
+}
+body .is-layout-flow > * + p {
+	margin-block-start: 0 !important;
 }
 
 // Selection Colors
