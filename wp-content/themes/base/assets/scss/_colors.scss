@@ -16,11 +16,19 @@ $green: #5cb85c;
 .has-true-black-background-color {
  background-color: $true-black;
 }
+.has-true-black-border-color {
+ border-color: $true-black;
+ border-style: solid;
+}
 .has-true-white-color {
  color: $true-white;
 }
 .has-true-white-background-color {
  background-color: $true-white;
+}
+.has-true-white-border-color {
+ border-color: $true-white;
+ border-style: solid;
 }
 .has-blue-color {
  color: $blue;
@@ -28,15 +36,27 @@ $green: #5cb85c;
 .has-blue-background-color {
  background-color: $blue;
 }
+.has-blue-border-color {
+ border-color: $blue;
+ border-style: solid;
+}
 .has-red-color {
  color: $red;
 }
 .has-red-background-color {
  background-color: $red;
 }
+.has-red-border-color {
+ border-color: $red;
+ border-style: solid;
+}
 .has-green-color {
  color: $green;
 }
 .has-green-background-color {
  background-color: $green;
+}
+.has-green-border-color {
+ border-color: $green;
+ border-style: solid;
 }

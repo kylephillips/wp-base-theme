@@ -44,6 +44,7 @@ var color_vars = async function(){
 		if ( json.hasOwnProperty(property) && typeof json[property] !== 'undefined' ){
 			scssString += ".has-" + json[property].slug + "-color {\n color: $" + json[property].slug + ";\n}\n"; 
 			scssString += ".has-" + json[property].slug + "-background-color {\n background-color: $" + json[property].slug + ";\n}\n"; 
+			scssString += ".has-" + json[property].slug + "-border-color {\n border-color: $" + json[property].slug + ";\n border-style: solid;\n}\n";
 		}
 	}
   	fs.writeFileSync("assets/scss/_colors.scss", scssString); 
