@@ -30,7 +30,6 @@ Theme.ScrollTo = function()
 	*/
 	self.scrollToLink = function(href)
 	{
-		console.log(href);
 		var top = $(href).offset().top;
 		if ( $('body').hasClass('logged-in') ) top = top - 32;
 		$('html, body').animate({

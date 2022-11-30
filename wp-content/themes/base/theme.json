@@ -2,7 +2,8 @@
     "version": 2,
     "styles": {
 		"spacing": {
-			"blockGap": "3rem"
+			"blockGap": "0",
+            "margin": true
 		}
 	},
 	"settings": {

@@ -1,6 +1,10 @@
 //
 // Primary Type Styles
 // --------------------------------------------------
+body .is-layout-flow > * + p,
+body .is-layout-flow > p {
+	margin-bottom: 2em;
+}
 p {
 	margin: 0 0 2em 0;
 	&.is-style-no-margin {
