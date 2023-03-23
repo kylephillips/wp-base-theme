@@ -17,9 +17,7 @@ Version: 1.0
 @import "_scaffolding.scss";
 @import "_typography.scss";
 @import "_forms.scss";
-@import "_buttons.scss";
 @import "_alerts.scss";
-@import "_spacers.scss";
 
 // Plugin Styles
 @import "_forms-gravity.scss";
@@ -28,6 +26,11 @@ Version: 1.0
 @import "_wp-formats.scss";
 
 @import "_block-columns.scss";
+@import "_block-list.scss";
+@import "_block-quote.scss";
+@import "_block-buttons.scss";
+@import "_block-separator.scss";
+@import "_block-spacers.scss";
 
 // Pages & Templates
 @import "_404.scss";

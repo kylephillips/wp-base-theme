@@ -18,12 +18,15 @@
 
 	@import "_block-editor-blocks.scss";
 	@import "_typography.scss";
-	@import "_buttons.scss";
 	@import "_alerts.scss";
 	@import "_wp-formats";
-	@import "_spacers.scss";
 
 	@import "_block-columns.scss";
+	@import "_block-list.scss";
+	@import "_block-quote.scss";
+	@import "_block-buttons.scss";
+	@import "_block-separator.scss";
+	@import "_block-spacers.scss";
 	@import "_tinymce.scss";
 }
 

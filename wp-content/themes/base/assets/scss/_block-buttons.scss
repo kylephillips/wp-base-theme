@@ -1,0 +1,50 @@
+//
+// Buttons Block
+// (Core WP Block and General Button Styles)
+// --------------------------------------------------
+.btn,
+.wp-block-button__link {
+	display: inline-block;
+	background-color: $blue;
+	color: $white;
+	text-decoration: none;
+	padding: .75rem 1.75rem;
+	font-size: 1rem;
+	border-radius: $button-border-radius;
+	border: 0;
+	cursor: pointer;
+	transition: all 200ms ease;
+	&:hover {
+		transition: all 200ms ease;
+		color: $white;
+		background-color: darken($blue, 5%);
+	}
+	&:active,
+	&:focus {
+		color: $white;
+	}
+}
+
+.btn-small {
+	font-size: .85rem;
+	padding: .5rem 1.25rem;
+}
+
+.wp-block-buttons > .wp-block-button.has-custom-font-size.has-small-font-size {
+	font-size: .85rem !important;
+	.wp-block-button__link {
+		padding: .5rem 1.25rem !important;
+	}
+}
+
+.wp-block-buttons > .wp-block-button.has-custom-font-size.has-mini-font-size {
+	font-size: .85rem !important;
+	.wp-block-button__link {
+		padding: .5rem 1.25rem !important;
+	}
+}
+
+.wp-block-button.is-style-outline >.wp-block-button__link, 
+.wp-block-button .wp-block-button__link.is-style-outline {
+	border-width: 1px;
+}
