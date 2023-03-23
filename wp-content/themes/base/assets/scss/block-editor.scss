@@ -65,3 +65,16 @@ body.gutenberg-editor-page .editor-block-list__block {
 		border: 1px solid #ccd0d4;
 	}
 }
+// Fix Image Upload Dialog
+.wp-block-image.wp-block-image.is-selected .components-placeholder,
+.wp-block-cover.is-placeholder .components-placeholder.is-large,
+.components-placeholder.block-editor-media-placeholder.is-large {
+	padding: 1rem !important;
+	font-size: 1rem;
+}
+
+.wp-block-image.wp-block-image.is-selected .components-placeholder,
+.wp-block-cover.is-placeholder .components-placeholder.is-large {
+	padding: 1rem !important;
+	font-size: 1rem;
+}
