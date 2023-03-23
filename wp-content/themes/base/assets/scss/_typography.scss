@@ -3,12 +3,12 @@
 // --------------------------------------------------
 body .is-layout-flow > * + p,
 body .is-layout-flow > p {
-	margin-bottom: 2em;
+	margin-bottom: 2rem;
 }
 p {
-	margin: 0 0 2em 0;
+	margin: 0 0 2rem 0;
 	&.is-style-no-margin {
-		margin: 0;
+		margin: 0 !important;
 	}
 }
 
@@ -21,53 +21,36 @@ strong {
 }
 
 h1 {
-	font-size: 3em;
-	font-weight: $bold;
+	font-size: clamp(2.5rem, 4.5rem, 4.5vw);
 	line-height: 1.1;
-	margin-bottom: .5em;
 }
 
 h2 {
-	font-size: 2em;
+	font-size: clamp(2.5rem, 2.5rem, 2.5vw);
 	font-weight: $bold;
 	line-height: 1.2;
-	margin-bottom: .2em;
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	line-height: 1.2;
 	font-weight: $bold;
-	margin-bottom: .3em;
 }
 
 h4 {
-	text-transform: uppercase;
-	font-size: .85em;
+	font-size: .85rem;
 	font-weight: $bold;
-	letter-spacing: .04em;
-	margin-bottom: .5em;
-	color: darken($white, 60%);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	&.is-style-no-margin {
-		margin: 0;
-	}
-}
-
-hr {
-	border: 0;
-	height: 4px;
-	background-color: $hr;
-	margin: 1.5em 0;
+	margin: 0;
 }
 
 ul, ol {
 	list-style-type: disc;
-	margin: 0 0 1.5em 1em;
+	margin: 0 0 1.5rem 1rem;
 	li {
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -89,12 +72,3 @@ sub {
 	position: relative;
 	bottom: -.4em;
 }
-
-blockquote {
-	padding: 1.5em 2em;
-	font-size: 1.4em;
-}
-.wp-block-quote {
-	border: 0;
-}
-
