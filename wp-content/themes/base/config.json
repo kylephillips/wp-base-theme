@@ -17,6 +17,10 @@
                 "inline" : false
             }
         },
+        "full-width": {
+            "block" : ["core/image"],
+            "label" : "Full Width"
+        },
         "extra-large-spacer": {
             "block" : ["core/spacer"],
             "label" : "Extra Large Spacer (8em)"

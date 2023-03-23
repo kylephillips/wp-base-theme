@@ -1,36 +1,10 @@
 //
 // Wordpress Specific Editor Formats
 // --------------------------------------------------
-.alignleft {
-	float: left;
-	width: 45%;
-	margin: .5em 1.5em 1em 0;
-}
-.alignright {
-	float: right;
-	width: 45%;
-	margin: .5em 0 1em 1.5em;
-}
-.alignnone {
-	width: 130%;
-	margin-left: -15%;
-	margin-bottom: 2em;
-}
 
 .wp-caption,
 .wp-block-image {
 	margin: 0;
-	&.alignnone,
-	&.alignwide {
-		width: 130% !important;
-		padding-top: 2em;
-		margin-left: -15%;
-		margin-bottom: 3em;
-		text-align: center;
-		img {
-			width: 100%;
-		}
-	}
 	&.alignleft, &.alignright {
 		width: 45% !important;
 	}
@@ -40,15 +14,29 @@
 	&.alignright {
 		margin: .5em 0 1em 1.5em;
 	}
-	img {
-		width: 100%;
-		margin-bottom: .5em;
-	}
 	p, figcaption {
 		font-size: .75em;
 		line-height: 1.3;
 		font-style: oblique;
 	}
+	&.is-style-full-width {
+		width: 100%;
+		.components-resizable-box__container {
+			width: 100% !important;
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
+
+img.alignright {
+	float: right;
+	margin: .5em 0 1em 1.5em;
+}
+img.alignleft {
+	float: right;
+	margin: .5em 1.5em 1em 0;
 }
 
 .wp-block-button.alignnone {
