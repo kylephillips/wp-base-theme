@@ -1,0 +1,73 @@
+<?php
+namespace Base\Presenters;
+/**
+* Provides methods for outputting block settings such as custom CSS,
+* Background Colors, Text Color, Padding, etc…
+*/
+class BlockPresenter
+{
+	private $block;
+
+	public function __construct($block)
+	{
+		$this->block = $block;
+	}
+
+	/**
+	* Add support for native classes
+	* @param str - any custom css that needs to be included
+	*/
+	public function css($css = '')
+	{
+		$text_color = $this->textColor();
+		$background_color = $this->backgroundColor();
+			$css = '';
+		$class_name = ( isset($this->block['className']) && isset($this->block['className']) !== '' )
+			? $this->block['className'] : null;
+		if ( $text_color ) $css .= ' has-' . $text_color . '-color';
+		if ( $background_color ) $css .= ' has-' . $background_color . '-background-color has-background';
+		if ( $class_name ) $css .= ' ' . $class_name;
+		return $css;
+	}
+
+	/**
+	* Background color
+	*/
+	public function backgroundColor()
+	{
+		return ( isset($this->block['backgroundColor']) && $this->block['backgroundColor'] !== '' ) 
+			? $this->block['backgroundColor'] : null;
+	}
+
+	/**
+	* Text color
+	*/
+	public function textColor()
+	{
+		return ( isset($this->block['textColor']) && $this->block['textColor'] !== '' ) 
+			? $this->block['textColor'] : null;
+	}
+
+	/**
+	* Inline styles
+	*/
+	public function styles($custom_styles = null)
+	{
+		$out = 'style="';
+		if ( $custom_styles ) $out .= $custom_styles;
+		if ( !isset($this->block['style']) || empty($this->block['style']) ) {
+			$out .= '"';
+			return $out;
+		}
+		$styles = $this->block['style'];
+		if ( isset($styles['spacing']) ) :
+			foreach ( $styles['spacing'] as $type => $spacing_styles ) :
+				foreach ( $spacing_styles as $key => $style ) :
+					$out .= $type . '-' . $key . ':' . $style . ';';
+				endforeach;
+			endforeach;
+		endif;
+		$out .= '"';
+		return $out;
+	}
+}
