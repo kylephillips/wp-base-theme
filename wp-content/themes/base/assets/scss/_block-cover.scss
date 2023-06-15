@@ -1,0 +1,43 @@
+//
+// Cover Block
+// (Core WP Block)
+// --------------------------------------------------
+@media #{$mobile}{
+	.wp-block-cover.is-style-mobile-stack-image {
+		flex-wrap: wrap-reverse;
+		padding: 0;
+		.wp-block-cover__image-background {
+			position: relative;
+			z-index: 2;
+		}
+		.wp-block-cover__background {
+			opacity: 1 !important;
+			z-index: 1;
+		}
+	}
+	.wp-block-cover.is-style-mobile-hide-image {
+		.wp-block-cover__image-background {
+			display: none;
+		}
+		.wp-block-cover__background {
+			opacity: 1 !important;
+			z-index: 1;
+		}
+	}
+	.wp-block-cover.is-style-has-mobile-image {
+		padding: 0;
+		flex-wrap: wrap-reverse;
+		.wp-block-cover__image-background {
+			display: none;
+		}
+		picture .wp-block-cover__image-background {
+			display: block;
+			position: relative;
+			z-index: 2;
+		}
+		.wp-block-cover__background {
+			opacity: 1 !important;
+			z-index: 1;
+		}
+	}
+}

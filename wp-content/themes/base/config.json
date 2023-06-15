@@ -17,6 +17,18 @@
                 "inline" : false
             }
         },
+        "mobile-stack-image": {
+            "block" : ["core/cover"],
+            "label" : "Mobile - Stack Image Below"
+        },
+        "mobile-hide-image": {
+            "block" : ["core/cover"],
+            "label" : "Mobile - Hide Image"
+        },
+        "has-mobile-image": {
+            "block" : ["core/cover"],
+            "label" : "Mobile - Separate Image"
+        },
         "full-width": {
             "block" : ["core/image"],
             "label" : "Full Width"

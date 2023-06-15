@@ -55,5 +55,6 @@ class Bootstrap
 		new AdminDisplay\AdvancedCustomFields;
 		new User\ProfileSettings;
 		new BlockEditor\InlineFormats;
+		new BlockEditor\MobileCoverImage;
 	}
 }
