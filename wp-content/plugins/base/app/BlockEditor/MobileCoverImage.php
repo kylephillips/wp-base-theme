@@ -13,7 +13,7 @@ class MobileCoverImage
 	*/
 	public function outputImage($content, $block)
 	{
-		if ( !isset($block['attrs']['mobileImageURL']) ) return;
+		if ( !isset($block['attrs']['mobileImageURL']) ) return $content;
 		$image = $block['attrs']['mobileImageURL'];
 
 		preg_match('/<div role="img"/', $content, $is_fixed);
