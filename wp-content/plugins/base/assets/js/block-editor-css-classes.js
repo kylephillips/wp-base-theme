@@ -23,6 +23,7 @@ getConfigJSON(editor_formats.config_url, function(err, data){
         console.log('There was an error loading the configuration file');
     } else {
         for ( const prop in data.editor_formats ){
+            if ( typeof data.editor_formats[prop].block === 'undefined' ) continue;
             for ( var i = 0; i < data.editor_formats[prop].block.length; i++ ){
                 wp.blocks.registerBlockStyle( data.editor_formats[prop].block[i], {
                     name: prop,
