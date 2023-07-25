@@ -65,7 +65,7 @@ class Display
 	public function headerType($template)
 	{
 		global $post;
-		if ( !$post ) return;
+		if ( !$post ) return $template;
 		$has_hero = false;
 		if ( has_blocks($post->post_content) ) :
 			$blocks = parse_blocks( $post->post_content );
