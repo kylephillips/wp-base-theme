@@ -5,7 +5,6 @@ var Theme = Theme || {};
 Theme.ScrollTo = function()
 {
 	var self = this;
-	var $ = jQuery;
 
 	self.selectors = {
 		inPageNavLink : 'data-in-page-nav-link',
@@ -16,25 +15,30 @@ Theme.ScrollTo = function()
 
 	self.bindEvents = function()
 	{
-		$(document).on('click', 'a', function(e){
-			var href = $(this).attr('href');
+		document.addEventListener('click', function(e){
+
+			const link = e.target.closest('a');
+			if ( !link ) return;
+			const href = link.getAttribute("href");
 			if ( !href.includes('#scroll-to') ) return;
 			e.preventDefault();
-			var target = href.replace('scroll-to-', '');
-			self.scrollToLink(target);
+			const target = href.replace('#scroll-to-', '');
+			const el = document.getElementById(target);
+			if ( !el ) return;
+			target.scrollIntoView({
+				behavior: 'smooth'
+			});
 		});
 	}
 
 	/**
 	* Scroll to a link
 	*/
-	self.scrollToLink = function(href)
+	self.scrollToLink = function(target)
 	{
-		var top = $(href).offset().top;
-		if ( $('body').hasClass('logged-in') ) top = top - 32;
-		$('html, body').animate({
-			scrollTop: top
-		}, 300);
+		target.scrollIntoView({
+			behavior: 'smooth'
+		});
 	}
 
 	return self.bindEvents();

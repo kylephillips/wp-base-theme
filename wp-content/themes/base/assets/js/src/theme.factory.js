@@ -3,52 +3,20 @@
 *
 */
 var Theme = Theme || {};
-
-jQuery(document).ready(function(){
+document.addEventListener("DOMContentLoaded", (event) => {
 	new Theme.Factory;
 });
 
 /**
-* DOM Selectors Used by the Theme
-*/
-Theme.selectors = {
-}
-
-/**
-* CSS Classes Used by the theme
-*/
-Theme.cssClasses = {
-	loading : 'loading', // Loading State
-	active : 'active', // Active State
-}
-
-/**
-* Localized JS Data Used by the theme
-*/
-Theme.jsData = {
-}
-
-/**
 * Primary factory class
 */
-Theme.Factory = function()
-{
+Theme.Factory = function() {
+
 	var self = this;
-	var $ = jQuery;
 
-	self.build = function()
-	{
-		self.initializeLibraries();
-	}
-
-	/**
-	* Initialize any 3rd party plugin/libraries required
-	*/
-	self.initializeLibraries = function()
-	{
+	self.build = () => {
 		new Theme.ScrollTo;
 		new Theme.Modals;
-		$('body').fitVids();
 	}
 
 	return self.build();
