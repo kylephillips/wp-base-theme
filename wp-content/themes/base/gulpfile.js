@@ -18,6 +18,7 @@ var css = __dirname;
 var js_source = [
 	'assets/js/src/lib/jquery.fitvids.js',
 	'assets/js/src/theme.scroll-to.js',
+	'assets/js/src/theme.modals.js',
 	'assets/js/src/theme.factory.js',
 ];
 var js_compiled = 'assets/js/';

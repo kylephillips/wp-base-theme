@@ -1,0 +1,38 @@
+{
+    "name": "acf/modal",
+    "title": "Modal",
+    "description": "Modal Window",
+    "category": "vernay",
+    "icon": "megaphone",
+    "apiVersion": 2,
+    "keywords": [
+        "map"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "modal.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": false,
+        "color": {
+            "text": true,
+            "background": true,
+            "link": true
+        },
+        "alignText": true,
+        "spacing": {
+            "margin": [
+                "top",
+                "bottom"
+            ],
+            "padding": true
+        },
+        "typography": {
+            "lineHeight": true,
+            "fontSize": true
+        },
+        "fullHeight": true
+    }
+}
