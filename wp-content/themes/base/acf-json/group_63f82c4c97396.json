@@ -41,32 +41,6 @@
             "append": ""
         },
         {
-            "key": "field_63fe744d4d165",
-            "label": "Type",
-            "name": "type",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "standard": "Standard",
-                "video": "Video"
-            },
-            "default_value": "standard",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_6400bf1f1f026",
             "label": "Size",
             "name": "size",
@@ -200,5 +174,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694531068
+    "modified": 1694532255
 }
