@@ -1,8 +1,7 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var autoprefix = require('gulp-autoprefixer');
 var livereload = require('gulp-livereload');
-var notify = require('gulp-notify');
 var minifycss = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -33,8 +32,7 @@ var styles = function(){
 		.pipe(autoprefix('last 5 version'))
 		.pipe(minifycss({keepBreaks: false}))
 		.pipe(gulp.dest(css))
-		.pipe(livereload())
-		.pipe(notify('Theme plugin admin styles compiled & compressed.'));
+		.pipe(livereload());
 }
 
 /**
@@ -46,8 +44,7 @@ var login_styles = function(){
 		.pipe(autoprefix('last 5 version'))
 		.pipe(minifycss({keepBreaks: false}))
 		.pipe(gulp.dest(css))
-		.pipe(livereload())
-		.pipe(notify('Theme plugin login styles compiled & compressed.'));
+		.pipe(livereload());
 }
 
 
@@ -57,8 +54,7 @@ var scheme_styles = function(){
 		.pipe(autoprefix('last 5 version'))
 		.pipe(minifycss({keepBreaks: false}))
 		.pipe(gulp.dest(css))
-		.pipe(livereload())
-		.pipe(notify('Theme plugin color scheme styles compiled & compressed.'));
+		.pipe(livereload());
 }
 
 /**
