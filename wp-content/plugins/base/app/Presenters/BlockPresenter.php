@@ -20,7 +20,7 @@ class BlockPresenter
 	public function css($css = '')
 	{
 		$text_color = $this->textColor();
-		$background_color = $this->backgroundColor();
+		$background_color = $this->backgroundColorClassName();
 			$css = '';
 		$class_name = ( isset($this->block['className']) && isset($this->block['className']) !== '' )
 			? $this->block['className'] : null;
@@ -31,12 +31,24 @@ class BlockPresenter
 	}
 
 	/**
-	* Background color
+	* Background color (CSS Classname)
 	*/
-	public function backgroundColor()
+	public function backgroundColorClassName()
 	{
 		return ( isset($this->block['backgroundColor']) && $this->block['backgroundColor'] !== '' ) 
 			? $this->block['backgroundColor'] : null;
+	}
+
+	/**
+	* Background color (InlineStyle)
+	* For colors chosen with the picker rather than selecting a predefined color
+	*/
+	public function backgroundColorInlineStyle()
+	{
+		$background_color = ( isset($this->block['style']['color']['background']) && $this->block['style']['color']['background'] !== '' ) 
+			? $this->block['style']['color']['background'] : null;
+		if ( !$background_color ) return;
+		return 'background-color:' . $background_color;
 	}
 
 	/**
@@ -67,6 +79,7 @@ class BlockPresenter
 				endforeach;
 			endforeach;
 		endif;
+		$out .= $this->backgroundColorInlineStyle();
 		$out .= '"';
 		return $out;
 	}
