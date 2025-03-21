@@ -105,9 +105,21 @@ class Dependencies
 	*/
 	public function footerScripts()
 	{
-		if ( !function_exists('get_field') ) return;
-		$scripts = get_field('footer_scripts', 'option');
-		if ( $scripts ) echo $scripts;
+		if ( function_exists('get_field') ) :
+			$scripts = get_field('footer_scripts', 'option');
+			if ( $scripts ) echo $scripts;
+		endif; 
+
+		// Dev - Livereload
+		if ( str_contains($_SERVER['SERVER_NAME'], '.test') ) :
+			wp_enqueue_script(
+				'livereload',
+				get_template_directory_uri() . '/node_modules/livereload-js/dist/livereload.js?snipver=1',
+				[],
+				THEME_VERSION,
+				true
+			);
+		endif;
 	}
 
 	/**
