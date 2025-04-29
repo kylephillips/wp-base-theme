@@ -53,7 +53,7 @@ img {
 	max-width: $container-width;
 	margin: 0 auto;
 	box-sizing: border-box;
-	padding: 0 1em;
+	padding: 0 2rem;
 	clear: both;
 	@include clearfix();
 	&.small {
