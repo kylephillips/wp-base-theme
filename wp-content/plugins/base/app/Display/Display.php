@@ -72,7 +72,6 @@ class Display
 			if ( $blocks && $blocks[0]['blockName'] == 'core/cover' ) $has_hero = true;
 			if ( $blocks && $blocks[0]['blockName'] == 'acf/hero' ) $has_hero = true;
 		endif;
-		if ( is_archive('albums') ) $has_hero = false;
 		define('HAS_HERO_BLOCK', $has_hero);
 		return $template;
 	}

@@ -4,7 +4,7 @@
 * To use, include a modal backdrop and modal content window with the appropriate data-attributes
 * The data attributes should match the value of the toggle buttons data-modal-toggle attribute
 * Alternatively, a standard link that references the modal ID will open the modal (with a hash) 
-* So, a modal with an id of "example" could be opened by a link with an href of "#example"
+* So, a modal with an id of "example" could be opened by a link with an href of "#modal-example"
 */
 var Theme = Theme || {};
 Theme.Modals = function()
@@ -30,6 +30,21 @@ Theme.Modals = function()
 			const closeBtn = e.target.closest(self.selectors.closeBtn);
 			const backdrop = e.target.closest(self.selectors.backdrop);
 			const link = e.target.closest('a');
+
+			/* 
+			* For #modal- links (do not require a data-attribute)
+			* Ex: href="#modal-window" would open a modal with an id of "window"
+			*/
+			if ( link ){
+				const link_target = link.getAttribute("href");
+				const is_modal_link = ( link_target.startsWith('#modal-') ) ? true : false;
+				if ( is_modal_link ) {
+					e.preventDefault();
+					const modal = link_target.replace('#modal-', '');
+					self.openModal(modal);
+					return;
+				}
+			}
 			
 			if ( toggleBtn ){
 				e.preventDefault();

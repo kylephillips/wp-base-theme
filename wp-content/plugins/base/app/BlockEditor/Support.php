@@ -2,7 +2,7 @@
 namespace Base\BlockEditor;
 
 /**
-* Adds Gutenberg Support
+* Adds Block Editor Support
 */
 class Support
 {
