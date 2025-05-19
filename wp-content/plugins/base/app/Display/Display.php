@@ -31,7 +31,7 @@ class Display
 	*/
 	public function cleanMenus($var)
 	{
-	  return is_array($var) ? array_intersect($var, ['current-menu-item','contact']) : '';
+	  return is_array($var) ? array_intersect($var, ['current-menu-item', 'menu-item-has-children']) : '';
 	}
 
 	/**
