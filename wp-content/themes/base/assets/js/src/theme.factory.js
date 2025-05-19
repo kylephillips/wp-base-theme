@@ -17,6 +17,7 @@ Theme.Factory = function() {
 	self.build = () => {
 		new Theme.ScrollTo;
 		new Theme.Modals;
+		new Theme.FieldLabels;
 	}
 
 	return self.build();
