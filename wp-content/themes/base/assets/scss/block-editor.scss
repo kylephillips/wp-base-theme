@@ -16,6 +16,13 @@
 	line-height: $base-line-height;
 	color: $black;
 
+	a {
+		color: reset;
+		&:hover {
+			color: reset;
+		}
+	}
+
 	@import "_block-editor-blocks.scss";
 	@import "_typography.scss";
 	@import "_alerts.scss";
