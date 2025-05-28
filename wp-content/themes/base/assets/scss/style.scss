@@ -22,7 +22,6 @@ Version: 1.0
 // Plugin Styles
 @import "_forms-gravity.scss";
 @import "_form-in-field.scss";
-@import "_modals.scss";
 
 // Editor Formats & WP Specific Styles
 @import "_wp-formats.scss";
@@ -34,6 +33,10 @@ Version: 1.0
 @import "_block-buttons.scss";
 @import "_block-separator.scss";
 @import "_block-spacers.scss";
+
+// ACF Blocks
+@import "_block-modals.scss";
+@import "_block-half-screen-content.scss";
 
 // Pages & Templates
 @import "_404.scss";

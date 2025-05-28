@@ -1,0 +1,45 @@
+{
+    "name": "acf/half-screen-content",
+    "title": "Half Screen Content",
+    "description": "Handles containing content that fits in a parent split grid",
+    "category": "base",
+    "icon": "align-pull-left",
+    "apiVersion": 2,
+    "keywords": [
+        "base",
+        "example"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "half-screen-content.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": false,
+        "color": {
+            "text": true,
+            "background": true,
+            "link": true
+        },
+        "alignText": true,
+        "spacing": {
+            "margin": [
+                "top",
+                "bottom"
+            ],
+            "padding": true
+        },
+        "typography": {
+            "lineHeight": true,
+            "fontSize": true
+        },
+        "fullHeight": true
+    },
+    "attributes": {
+        "backgroundColor": {
+            "type": "string",
+            "default": "white"
+        }
+    }
+}
