@@ -12,3 +12,31 @@
 .pull-right {
 	float: right;
 }
+
+@media #{$mobile}
+{
+	.hidden-mobile {
+		display: none;
+	}
+	.mobile-top-padding-small {
+		padding-top: 2rem !important;
+	}
+	.mobile-right-padding-small {
+		padding-right: 2rem !important;
+	}
+	.mobile-bottom-padding-small {
+		padding-bottom: 2rem !important;
+	}
+	.mobile-left-padding-small {
+		padding-left: 2rem !important;
+	}
+	.mobile-padding-small {
+		padding: 2rem !important;
+	}
+	.no-padding-mobile {
+		padding: 0 !important;
+	}
+	.no-gap-mobile {
+		gap: 0 !important;
+	}
+}

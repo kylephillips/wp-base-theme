@@ -8,6 +8,10 @@
             "block" : ["core/columns"],
             "label" : "Container - Small"
         },
+        "justify-center": {
+            "block" : ["core/columns"],
+            "label" : "Justify Center"
+        },
         "no-margin": {
             "block" : ["core/paragraph", "core/heading"],
             "label" : "No Margin",
