@@ -6,13 +6,6 @@ Theme.ScrollTo = function()
 {
 	var self = this;
 
-	self.selectors = {
-		inPageNavLink : 'data-in-page-nav-link',
-		toggleButton : 'data-in-page-nav-toggle',
-		backToTopButton: 'data-back-to-top',
-		stickyElement : 'data-sticky-element'
-	}
-
 	self.bindEvents = function()
 	{
 		document.addEventListener('click', function(e){
@@ -25,19 +18,9 @@ Theme.ScrollTo = function()
 			const target = href.replace('#scroll-to-', '');
 			const el = document.getElementById(target);
 			if ( !el ) return;
-			target.scrollIntoView({
+			el.scrollIntoView({
 				behavior: 'smooth'
 			});
-		});
-	}
-
-	/**
-	* Scroll to a link
-	*/
-	self.scrollToLink = function(target)
-	{
-		target.scrollIntoView({
-			behavior: 'smooth'
 		});
 	}
 
