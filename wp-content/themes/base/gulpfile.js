@@ -48,6 +48,17 @@ var color_vars = async function(){
 			scssString += ".has-" + json[property].slug + "-border-color {\n border-color: $" + json[property].slug + ";\n border-style: solid;\n}\n";
 		}
 	}
+	
+	// Half screen block
+	scssString += "\n\n";
+	scssString += "@media (max-width: 767px){\n";
+	for ( const property in json ){
+		if ( json.hasOwnProperty(property) && typeof json[property] !== 'undefined' ){
+		scssString += ".block-half-screen-content .wp-block-column.has-" + json[property].slug + "-background-color {\n";
+		scssString += " background-color: $" + json[property].slug + " !important;\n}\n\n"; 
+		}
+	}
+	scssString += "\n}";
   	fs.writeFileSync("assets/scss/_colors.scss", scssString); 
 }
 

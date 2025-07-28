@@ -30,7 +30,29 @@
 		position: relative;
 		z-index: 2;
 	}
+	.wp-block-column {
+		background: transparent !important;
+	}
 	@media #{$mobile}{
+		.wp-block-columns {
+			gap: 0 !important;
+		}
+		.wp-block-columns > .wp-block-column {
+			padding: 2rem 1rem;
+		}
+		.is-style-container {
+			padding: 0;
+		}
+		.wp-block-spacer {
+			height: 0 !important;
+		}
+		.wp-block-columns .wp-block-column .wp-block-spacer {
+			&.is-style-large-spacer,
+			&.is-style-medium-spacer,
+			&.is-style-small-spacer {
+				height: 2rem !important;
+			}
+		}
 		.background-columns {
 			display: block;
 		}
