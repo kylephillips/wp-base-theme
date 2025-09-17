@@ -72,6 +72,15 @@ class BlockPresenter
 	}
 
 	/**
+	* Block Gap
+	*/
+	public function blockGap()
+	{
+		return ( isset($this->block['style']) && isset($this->block['style']['spacing']) && isset($this->block['style']['spacing']['blockGap']) && $this->block['style']['spacing']['blockGap'] !== '' ) 
+			? $this->block['style']['spacing']['blockGap'] : null;
+	}
+
+	/**
 	* Inline styles
 	*/
 	public function styles($custom_styles = null)
