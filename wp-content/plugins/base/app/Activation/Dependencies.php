@@ -111,15 +111,15 @@ class Dependencies
 		endif; 
 
 		// Dev - Livereload
-		if ( str_contains($_SERVER['SERVER_NAME'], '.test') ) :
-			wp_enqueue_script(
-				'livereload',
-				get_template_directory_uri() . '/node_modules/livereload-js/dist/livereload.js?snipver=1',
-				[],
-				THEME_VERSION,
-				true
-			);
-		endif;
+		// if ( str_contains($_SERVER['SERVER_NAME'], '.test') ) :
+		// 	wp_enqueue_script(
+		// 		'livereload',
+		// 		get_template_directory_uri() . '/node_modules/livereload-js/dist/livereload.js?snipver=1',
+		// 		[],
+		// 		THEME_VERSION,
+		// 		true
+		// 	);
+		// endif;
 	}
 
 	/**

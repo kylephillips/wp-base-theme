@@ -20,6 +20,7 @@ class BlockPresenter
 	public function css($css = '')
 	{
 		$text_color = $this->textColor();
+		$text_align = $this->textAlign();
 		$background_color = $this->backgroundColorClassName();
 			$css = '';
 		$class_name = ( isset($this->block['className']) && isset($this->block['className']) !== '' )
@@ -27,6 +28,7 @@ class BlockPresenter
 		if ( $text_color ) $css .= ' has-' . $text_color . '-color';
 		if ( $background_color ) $css .= ' has-' . $background_color . '-background-color has-background';
 		if ( $class_name ) $css .= ' ' . $class_name;
+		if ( $text_align ) $css .= ' align-' . $text_align;
 		return $css;
 	}
 
@@ -58,6 +60,15 @@ class BlockPresenter
 	{
 		return ( isset($this->block['textColor']) && $this->block['textColor'] !== '' ) 
 			? $this->block['textColor'] : null;
+	}
+
+	/**
+	* Text align
+	*/
+	public function textAlign()
+	{
+		return ( isset($this->block['alignText']) && $this->block['alignText'] !== '' ) 
+			? $this->block['alignText'] : null;
 	}
 
 	/**
