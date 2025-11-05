@@ -21,11 +21,12 @@ class BlockPresenter
 	{
 		$text_color = $this->textColor();
 		$text_align = $this->textAlign();
+		$font_size = $this->fontSize();
 		$background_color = $this->backgroundColorClassName();
-			$css = '';
 		$class_name = ( isset($this->block['className']) && isset($this->block['className']) !== '' )
 			? $this->block['className'] : null;
 		if ( $text_color ) $css .= ' has-' . $text_color . '-color';
+		if ( $font_size ) $css .= ' has-' . $font_size . '-font-size';
 		if ( $background_color ) $css .= ' has-' . $background_color . '-background-color has-background';
 		if ( $class_name ) $css .= ' ' . $class_name;
 		if ( $text_align ) $css .= ' align-' . $text_align;
@@ -60,6 +61,15 @@ class BlockPresenter
 	{
 		return ( isset($this->block['textColor']) && $this->block['textColor'] !== '' ) 
 			? $this->block['textColor'] : null;
+	}
+
+	/**
+	* Font Size
+	*/
+	public function fontSize()
+	{
+		return ( isset($this->block['fontSize']) && $this->block['fontSize'] !== '' ) 
+			? $this->block['fontSize'] : null;
 	}
 
 	/**
