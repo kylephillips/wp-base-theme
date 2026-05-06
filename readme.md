@@ -1,6 +1,6 @@
 # Base Framework for Custom WordPress Sites
 
-This is a basic theme/plugin framework for starting out a new custom theme build in WordPress. Front-end styles and scripts use a Gulp build process with SCSS styles. This is not an "all-in-one" theme builder – it is a set of templates and processes meant to cut down on project setup and development time.
+This is a basic theme/plugin framework for starting out a new custom theme build in WordPress. Front-end styles and scripts use a npm build process with SCSS styles. This is not an "all-in-one" theme builder – it is a set of templates and processes meant to cut down on project setup and development time.
 
 This framework includes:
 
@@ -34,7 +34,7 @@ define( 'DB_PASSWORD', 'dbpassword' );
 define( 'DB_HOST', 'hostname' );
 ```
 
-* Set `WP_DEBUG` to `true` for local development.
+* Set `WP_DEBUG` to `true` for local development. This will also enable livereload for previewing updates.
 
 *** 
 
@@ -63,11 +63,11 @@ define( 'DB_HOST', 'hostname' );
 ***
 
 ### Theme Development
-The theme uses a [gulp.js](https://gulpjs.com/) build process for styles and scripts.
+The theme uses an npm build process for styles and scripts.
 
 * `cd` into the theme directory
 * Run `npm install` to install node dependencies
-* Run `gulp` to start the build process
+* Run `npm run watch` to start the build process
 * Update the `acf-json` directory with server-writeable permissions in order to sync ACF field groups.
 
 #### Styles
@@ -112,9 +112,9 @@ Scripts are setup modularily, with a separate class/file for each component. If 
   * This source file should extend the primary plugin JS class
   * All functionality related to the component should be contained in the class
 * Instantiate this new class in the factory class `sitename.factory.js`
-* Update `gulpfile.js` to include this new file
+* Update `build-scripts/build-js.js` to include this new file
   * The filename should be added to the `js_source` array
-* Stop gulp if running and restart the build process
+* Rerun `npm run watch`
 
 #### Blocks
 Custom block registration assumes Advanced Custom Fields version 6 or above is installed. Blocks are registered by adding a directory to the `/blocks` theme directory. Two files are required inside each directory:
