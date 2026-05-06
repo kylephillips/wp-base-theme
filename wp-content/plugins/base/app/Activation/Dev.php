@@ -14,7 +14,8 @@ class Dev
         ?>
         <script>
         (function () {
-            var sheets = Array.from( document.querySelectorAll( 'link[rel=stylesheet]' ) );
+            var sheets = Array.from( document.querySelectorAll( 'link[rel=stylesheet]' ) )
+    .filter( function ( el ) { return el.href.indexOf( location.origin ) === 0; } );
             var mods   = {};
             setInterval( function () {
                 sheets.forEach( function ( sheet ) {
