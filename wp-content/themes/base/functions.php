@@ -24,8 +24,10 @@ register_nav_menus([
 * Register ACF Options Page
 */
 if( function_exists('acf_add_options_page') ){
-	acf_add_options_page([
-		'page_title' => 'Site Options',
-		'menu_title' => 'Options'
-	]);
+	add_action('acf/init', function() {
+		acf_add_options_page([
+			'page_title' => 'Site Options',
+			'menu_title' => 'Options'
+		]);
+	});
 }
