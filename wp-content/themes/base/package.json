@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "node build-scripts/generate.js && node build-scripts/build-css.js && node scripts/build-js.js",
+    "build": "node build-scripts/generate.js && node build-scripts/build-css.js && node build-scripts/build-js.js",
     "watch": "node build-scripts/watch.js",
     "generate": "node build-scripts/generate.js"
   },
@@ -9,7 +9,6 @@
     "chokidar": "^3.6.0",
     "cssnano": "^7.0.6",
     "esbuild": "^0.25.0",
-    "livereload": "^0.9.3",
     "postcss": "^8.5.3",
     "sass": "^1.70.0"
   }

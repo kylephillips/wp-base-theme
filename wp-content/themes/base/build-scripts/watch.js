@@ -1,7 +1,6 @@
 'use strict';
 
 const chokidar = require('chokidar');
-const livereload = require('livereload');
 const { execFileSync } = require('child_process');
 const path = require('path');
 
@@ -22,16 +21,6 @@ function run(script) {
 function ts() {
 	return new Date().toLocaleTimeString('en-US', { hour12: false });
 }
-
-// LiveReload server watches the compiled output files
-const lrServer = livereload.createServer({ delay: 50 });
-lrServer.watch([
-	path.join(ROOT, 'style.css'),
-	path.join(ROOT, 'block-editor.css'),
-	path.join(ROOT, 'assets/js/scripts.min.js'),
-]);
-
-console.log(`[${ts()}] LiveReload listening on port 35729`);
 
 // Initial build
 console.log(`[${ts()}] Building...`);

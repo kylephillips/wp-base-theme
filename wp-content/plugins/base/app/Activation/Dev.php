@@ -10,8 +10,29 @@ class Dev
 
     public function livereload()
     {
-        if ( !defined('WP_DEBUG') ) return;
-        if ( !WP_DEBUG ) return;
-        echo '<script src="http://' . $_SERVER['HTTP_HOST'] . ':35729/livereload.js?snipver=1"></script>';
+        if ( !defined( 'WP_DEBUG' ) || !WP_DEBUG ) return;
+        ?>
+        <script>
+        (function () {
+            var sheets = Array.from( document.querySelectorAll( 'link[rel=stylesheet]' ) );
+            var mods   = {};
+            setInterval( function () {
+                sheets.forEach( function ( sheet ) {
+                    var base = sheet.href.split( '?' )[0];
+                    var xhr  = new XMLHttpRequest();
+                    xhr.open( 'HEAD', base + '?_check=' + Date.now(), true );
+                    xhr.onload = function () {
+                        var lm = xhr.getResponseHeader( 'last-modified' );
+                        if ( mods[base] !== undefined && lm !== mods[base] ) {
+                            sheet.href = base + '?_lr=' + Date.now();
+                        }
+                        mods[base] = lm;
+                    };
+                    xhr.send();
+                } );
+            }, 1000 );
+        })();
+        </script>
+        <?php
     }
 }
