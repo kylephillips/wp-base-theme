@@ -43,6 +43,7 @@ class Bootstrap
 	*/
 	public function pluginInit()
 	{
+		new Activation\Dev;
 		new Activation\GoogleFonts('//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap'); // Set to null if not using Google Fonts
 		new Activation\CloudTypography(null); // example: //cloud.typography.com/id/od/css/fonts.css
 		new Blocks\RegisterBlocks;
