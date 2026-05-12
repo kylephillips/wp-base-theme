@@ -6,6 +6,7 @@ class Dev
     public function __construct()
     {
         add_action('wp_footer', [$this, 'livereload']);
+        add_action('admin_footer', [$this, 'livereload']);
     }
 
     public function livereload()
