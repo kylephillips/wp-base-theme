@@ -19,6 +19,7 @@ class Typekit
 		add_action('admin_head', [$this, 'adminHeadGlobals']);
 		add_action('wp_enqueue_scripts', [$this, 'styles']);
 		add_action('admin_enqueue_scripts', [$this, 'styles']);
+		add_action('enqueue_block_assets', [$this, 'styles']);
 	}
 
 	/**

@@ -6,7 +6,8 @@
 @import "_mixins.scss";
 
 .edit-post-visual-editor.editor-styles-wrapper, 
-.block-editor-writing-flow.block-editor-writing-flow {
+.block-editor-writing-flow.block-editor-writing-flow,
+.block-editor-iframe__html {
 	@import "_reset.scss";
 	@import "_scaffolding.scss";
 

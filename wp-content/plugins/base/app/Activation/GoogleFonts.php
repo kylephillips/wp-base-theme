@@ -15,6 +15,7 @@ class GoogleFonts
 		$this->url = $url;
 		add_action( 'wp_enqueue_scripts', [$this, 'enqueue']);
 		add_action( 'admin_enqueue_scripts', [$this, 'enqueue']);
+		add_action('enqueue_block_assets', [$this, 'enqueue']);
 	}
 
 	public function enqueue()

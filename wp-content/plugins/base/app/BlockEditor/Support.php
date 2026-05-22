@@ -8,9 +8,10 @@ class Support
 {
 	public function __construct()
 	{
-		add_action('enqueue_block_editor_assets', [$this, 'editorStyles']);
+		add_theme_support('editor-styles');
+		add_action('enqueue_block_assets', [$this, 'editorStyles']);
 		add_theme_support('align-wide');
-		add_action('enqueue_block_editor_assets', [$this, 'editorScripts']);
+		add_action('enqueue_block_assets', [$this, 'editorScripts']);
 		add_action('enqueue_block_editor_assets', [$this, 'responsiveCoverBlock']);
 	}
 
@@ -22,13 +23,13 @@ class Support
 		$deps = [];
 		if ( THEME_GOOGLE_FONTS ) $deps[] = 'theme-google-fonts';
 		if ( THEME_CLOUD_TYPOGRAPHY ) $deps[] = 'theme-cloud-typography';
-		 wp_enqueue_style(
-		 	'block-editor-styles', 
-		 	get_theme_file_uri( '/block-editor.css' ), 
-		 	$deps, 
-		 	THEME_VERSION, 
-		 	'all'
-		 );
+		wp_enqueue_style(
+			'block-editor-styles',
+			get_theme_file_uri( '/block-editor.css' ),
+			$deps,
+			THEME_VERSION,
+			'all'
+		);
 	}
 
 	/**
