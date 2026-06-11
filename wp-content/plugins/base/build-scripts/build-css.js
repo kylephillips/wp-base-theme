@@ -10,8 +10,8 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
 const entries = [
-	{ input: 'assets/scss/style.scss', output: 'style.css' },
-	{ input: 'assets/scss/block-editor.scss', output: 'block-editor.css' },
+	{ input: 'assets/scss/login.scss', output: 'assets/css/login.css' },
+	{ input: 'assets/scss/admin_style.scss', output: 'assets/css/admin_style.css' },
 ];
 
 async function buildCSS() {

@@ -1,8 +1,7 @@
 {
   "scripts": {
-    "build": "node build-scripts/generate.js && node build-scripts/build-css.js && node build-scripts/build-js.js",
-    "watch": "node build-scripts/watch.js",
-    "generate": "node build-scripts/generate.js"
+    "build": "node build-scripts/build-css.js && node build-scripts/build-js.js",
+    "watch": "node build-scripts/watch.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
