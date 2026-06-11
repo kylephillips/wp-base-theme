@@ -13,8 +13,9 @@ class CloudTypography
 		define('THEME_CLOUD_TYPOGRAPHY', $url);
 		if ( !$url ) return false;
 		$this->url = $url;
-		add_action( 'wp_enqueue_scripts', [$this, 'enqueue']);
-		add_action( 'admin_enqueue_scripts', [$this, 'enqueue']);
+		add_action('wp_enqueue_scripts', [$this, 'enqueue']);
+		add_action('admin_enqueue_scripts', [$this, 'enqueue']);
+		add_action('enqueue_block_assets', [$this, 'enqueue']);
 	}
 
 	public function enqueue()

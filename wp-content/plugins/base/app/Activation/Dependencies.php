@@ -9,7 +9,6 @@ class Dependencies
 		add_action( 'wp_enqueue_scripts', [$this, 'scripts']);
 		add_action( 'wp_enqueue_scripts', [$this, 'styles']);
 		add_action( 'admin_enqueue_scripts', [$this, 'adminStyles']);
-		add_action( 'admin_init', [$this, 'colorScheme']);
 		add_action( 'wp_head', [$this, 'headScripts']);
 		add_action( 'wp_footer', [$this, 'footerScripts']);
 		add_action( 'wp_body_opening', [$this, 'bodyScripts']);
@@ -79,18 +78,6 @@ class Dependencies
 	}
 
 	/**
-	* Custom Admin Color Scheme
-	*/
-	public function colorScheme()
-	{	
-		wp_admin_css_color(
-		    'custom-scheme', THEME_COLOR_SCHEME,
-		   	THEME_PLUGIN_DIRECTORY . '/assets/css/colors.css',
-		    [ '#000000', '#e72234', '#ebecec', '#456a7f' ]
-		);
-	}
-
-	/**
 	* Head Scripts
 	*/
 	public function headScripts()
@@ -108,18 +95,7 @@ class Dependencies
 		if ( function_exists('get_field') ) :
 			$scripts = get_field('footer_scripts', 'option');
 			if ( $scripts ) echo $scripts;
-		endif; 
-
-		// Dev - Livereload
-		// if ( str_contains($_SERVER['SERVER_NAME'], '.test') ) :
-		// 	wp_enqueue_script(
-		// 		'livereload',
-		// 		get_template_directory_uri() . '/node_modules/livereload-js/dist/livereload.js?snipver=1',
-		// 		[],
-		// 		THEME_VERSION,
-		// 		true
-		// 	);
-		// endif;
+		endif;
 	}
 
 	/**
