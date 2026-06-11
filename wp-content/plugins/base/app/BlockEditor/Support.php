@@ -64,7 +64,7 @@ class Support
 		wp_enqueue_script(
 			'responsive-cover-block',
 			THEME_PLUGIN_DIRECTORY . '/assets/js/block-editor-responsive-cover.js',
-			['wp-blocks',  'wp-dom']
+			['wp-blocks',  'wp-dom', 'wp-block-editor']
 		);
 	}
 }

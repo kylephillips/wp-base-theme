@@ -4,12 +4,13 @@
     "description": "Handles containing content that fits in a parent split grid",
     "category": "base",
     "icon": "align-pull-left",
-    "apiVersion": 2,
+    "apiVersion": 3,
     "keywords": [
         "base",
         "example"
     ],
     "acf": {
+        "blockVersion": 3,
         "mode": "preview",
         "renderTemplate": "half-screen-content.php"
     },
